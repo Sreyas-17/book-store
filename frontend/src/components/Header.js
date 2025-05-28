@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Book, Search, Heart, ShoppingCart, User } from 'lucide-react';
 
 const Header = ({ 
@@ -11,6 +11,7 @@ const Header = ({
   searchBooks, 
   handleLogout 
 }) => {
+  const [searchType, setSearchType] = useState('title');
   
   console.log('Header render - User:', user);
   console.log('Header render - Cart length:', cart?.length || 0);
@@ -25,17 +26,61 @@ const Header = ({
         </div>
 
         <div className="search-container">
-          <Search className="search-icon" size={20} />
-          <input
-            type="text"
-            placeholder="Search books..."
-            value={searchTerm}
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-              searchBooks(e.target.value);
-            }}
-            className="search-input"
-          />
+          <div className="search-wrapper" style={{
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: '#f5f5f5',
+            borderRadius: '8px',
+            padding: '8px 16px',
+            width: '100%',
+            maxWidth: '700px',
+            border: '1px solid #e0e0e0',
+            height: '48px'
+          }}>
+            <select 
+              value={searchType}
+              onChange={(e) => setSearchType(e.target.value)}
+              className="search-type-select"
+              style={{
+                padding: '8px 12px',
+                marginRight: '8px',
+                borderRadius: '4px',
+                border: 'none',
+                backgroundColor: 'transparent',
+                color: '#333',
+                fontSize: '15px',
+                cursor: 'pointer',
+                outline: 'none',
+                width: '160px',
+                height: '36px'
+              }}
+            >
+              <option value="title">Title</option>
+              <option value="author">Author</option>
+            </select>
+            <div style={{ width: '1px', height: '28px', backgroundColor: '#e0e0e0', margin: '0 12px' }}></div>
+            <Search className="search-icon" size={18} style={{ color: '#666', marginRight: '16px' }} />
+            <input
+              type="text"
+              placeholder={`Search by ${searchType}`}
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                searchBooks(e.target.value, searchType);
+              }}
+              className="search-input"
+              style={{
+                border: 'none',
+                backgroundColor: 'transparent',
+                padding: '8px 12px',
+                width: '100%',
+                fontSize: '15px',
+                outline: 'none',
+                height: '36px',
+                marginLeft: '4px'
+              }}
+            />
+          </div>
         </div>
 
         <nav className="nav">
