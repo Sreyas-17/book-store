@@ -39,6 +39,26 @@ export const useBooks = () => {
     }
   };
 
+  const searchByAuthor = async (term) => {
+    if (!term.trim()) {
+      fetchBooks();
+      return;
+    }
+    
+    try {
+      const response = await bookService.searchBooks(term);
+      if (response.success) {
+        // Filter books by author
+        const authorBooks = response.data.filter(book => 
+          book.author.toLowerCase().includes(term.toLowerCase())
+        );
+        setBooks(authorBooks);
+      }
+    } catch (error) {
+      console.error('Error searching books by author:', error);
+    }
+  };
+
   const rateBook = async (bookId, rating) => {
     if (!user?.id) {
       return { success: false, message: 'Please login first' };
@@ -65,6 +85,7 @@ export const useBooks = () => {
     setSearchTerm,
     fetchBooks,
     searchBooks,
+    searchByAuthor,
     rateBook
   };
 };

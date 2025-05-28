@@ -9,6 +9,7 @@ const Header = ({
   setCurrentPage, 
   setSearchTerm, 
   searchBooks, 
+  searchByAuthor,
   handleLogout 
 }) => {
   const [searchType, setSearchType] = useState('title');
@@ -56,7 +57,7 @@ const Header = ({
               }}
             >
               <option value="title">Title</option>
-              <option value="author">Author</option>
+              <option value="author"> Author</option>
             </select>
             <div style={{ width: '1px', height: '28px', backgroundColor: '#e0e0e0', margin: '0 12px' }}></div>
             <Search className="search-icon" size={18} style={{ color: '#666', marginRight: '16px' }} />
@@ -66,7 +67,11 @@ const Header = ({
               value={searchTerm}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
-                searchBooks(e.target.value, searchType);
+                if (searchType === 'title') {
+                  searchBooks(e.target.value);
+                } else {
+                  searchByAuthor(e.target.value);
+                }
               }}
               className="search-input"
               style={{
