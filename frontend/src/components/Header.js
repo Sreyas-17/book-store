@@ -1,4 +1,3 @@
-// src/components/Header.js - Fixed version with proper user state handling
 import React from 'react';
 import { Book, Search, Heart, ShoppingCart, User } from 'lucide-react';
 
@@ -13,7 +12,6 @@ const Header = ({
   handleLogout 
 }) => {
   
-  // Debug logging
   console.log('Header render - User:', user);
   console.log('Header render - Cart length:', cart?.length || 0);
   console.log('Header render - Wishlist length:', wishlist?.length || 0);

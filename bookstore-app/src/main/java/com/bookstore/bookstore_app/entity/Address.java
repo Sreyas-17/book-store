@@ -2,6 +2,7 @@ package com.bookstore.bookstore_app.entity;
 
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "user_addresses")
@@ -10,23 +11,40 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
-    @JsonIgnore  // Don't include user in address JSON to prevent recursion
+    @JsonIgnore // Don't include user in JSON to prevent recursion
     private User user;
 
+    @Column(name = "address_line1", nullable = false)
     private String addressLine1;
+
+    @Column(name = "address_line2")
     private String addressLine2;
+
+    @Column(nullable = false)
     private String city;
+
+    @Column(nullable = false)
     private String state;
+
+    @Column(nullable = false)
     private String country;
+
+    @Column(name = "postal_code", nullable = false)
     private String postalCode;
+
+    @Column(name = "is_default")
     private boolean isDefault = false;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     // Constructors
     public Address() {}
 
-    public Address(User user, String addressLine1, String city, String state, String country, String postalCode) {
+    public Address(User user, String addressLine1, String city, String state, 
+                   String country, String postalCode) {
         this.user = user;
         this.addressLine1 = addressLine1;
         this.city = city;
@@ -61,5 +79,8 @@ public class Address {
     public void setPostalCode(String postalCode) { this.postalCode = postalCode; }
 
     public boolean isDefault() { return isDefault; }
-    public void setDefault(boolean aDefault) { isDefault = aDefault; }
+    public void setDefault(boolean isDefault) { this.isDefault = isDefault; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

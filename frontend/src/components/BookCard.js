@@ -1,17 +1,19 @@
 import React from "react";
-import { Star, Heart, Plus, Minus } from "lucide-react";
+import { Heart, Plus, Minus } from "lucide-react";
+import StarRating from './StarRating'; 
 
 const BookCard = ({
   book,
-  user, // Make sure user is received
+  user,
   addToCart,
   updateCartQuantity,
   addToWishlist,
   removeFromWishlist,
   isInWishlist,
   getCartItemQuantity,
+  rateBook, 
 }) => {
-  // Debug logging
+ 
   console.log(
     "BookCard - Book ID:",
     book.id,
@@ -19,7 +21,6 @@ const BookCard = ({
     user?.email || "No user"
   );
 
-  // Check if functions exist
   if (!addToCart || !isInWishlist || !getCartItemQuantity) {
     console.error("BookCard: Required functions not passed as props");
     return <div>Error: Missing required functions</div>;
@@ -100,6 +101,28 @@ const BookCard = ({
     }
   };
 
+  const handleRating = async (bookId, rating) => {
+    if (!user || !user.id) {
+      alert('Please login to rate books');
+      return;
+    }
+
+    if (rateBook) {
+      try {
+        console.log(' Rating book:', bookId, 'with', rating, 'stars');
+        const result = await rateBook(bookId, rating);
+        if (result && result.success) {
+          alert(`Thank you for rating this book ${rating} stars!`);
+        } else {
+          alert('Failed to rate book: ' + (result?.message || 'Unknown error'));
+        }
+      } catch (error) {
+        console.error('Error rating book:', error);
+        alert('Error submitting rating');
+      }
+    }
+  };
+
   return (
     <div className="book-card">
       <img
@@ -126,19 +149,14 @@ const BookCard = ({
         <p className="book-author">by {book.author}</p>
 
         <div className="book-rating">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                size={16}
-                className={
-                  i < Math.floor(book.ratingAvg) ? "star" : "star star-empty"
-                }
-                fill={i < Math.floor(book.ratingAvg) ? "currentColor" : "none"}
-              />
-            ))}
-          </div>
-          <span className="rating-count">({book.totalRatings})</span>
+          <StarRating
+            bookId={book.id}
+            currentRating={book.ratingAvg || 0}
+            totalRatings={book.totalRatings || 0}
+            onRate={handleRating}
+            readonly={!user}
+            size={16}
+          />
         </div>
 
         <div className="book-price-row">

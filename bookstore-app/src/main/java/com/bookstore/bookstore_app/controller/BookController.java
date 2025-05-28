@@ -7,6 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.math.RoundingMode;
+import java.util.Map;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 @RestController
@@ -124,4 +129,39 @@ public class BookController {
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }
+
+    @PostMapping("/{bookId}/rate")
+public ResponseEntity<ApiResponse<String>> rateBook(
+        @PathVariable Long bookId,
+        @RequestBody Map<String, Object> ratingData) {
+    try {
+        System.out.println("⭐ Rating request received for book: " + bookId);
+        System.out.println("⭐ Rating data: " + ratingData);
+        
+        Long userId = Long.valueOf(ratingData.get("userId").toString());
+        Integer rating = Integer.valueOf(ratingData.get("rating").toString());
+        
+        System.out.println("⭐ User: " + userId + ", Rating: " + rating);
+        
+        // Validate rating
+        if (rating < 1 || rating > 5) {
+            return ResponseEntity.badRequest()
+                    .body(ApiResponse.error("Rating must be between 1 and 5 stars"));
+        }
+        
+        // Use bookService instead of bookRepository
+        Book updatedBook = bookService.rateBook(bookId, rating);
+        
+        System.out.println("⭐ Book updated successfully: " + updatedBook.getTitle());
+        
+        return ResponseEntity.ok(ApiResponse.success("Book rated successfully"));
+        
+    } catch (Exception e) {
+        System.err.println("❌ Error rating book: " + e.getMessage());
+        e.printStackTrace();
+        return ResponseEntity.badRequest()
+                .body(ApiResponse.error("Failed to rate book: " + e.getMessage()));
+    }
+}    
+
 }

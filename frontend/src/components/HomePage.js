@@ -4,18 +4,20 @@ import BookCard from './BookCard';
 
 const HomePage = ({ 
   books,
-  user,  // Make sure user is received
+  user,
   addToCart,
   updateCartQuantity,
   addToWishlist,
   removeFromWishlist,
   isInWishlist,
-  getCartItemQuantity
+  getCartItemQuantity,
+  rateBook 
 }) => {
   
-  // Debug logging
+
   console.log('HomePage - User:', user);
   console.log('HomePage - Books count:', books.length);
+  console.log('HomePage - rateBook function:', typeof rateBook);
   
   return (
     <div className="container">
@@ -29,13 +31,14 @@ const HomePage = ({
           <BookCard 
             key={book.id} 
             book={book}
-            user={user}  // Pass user to BookCard
+            user={user}
             addToCart={addToCart}
             updateCartQuantity={updateCartQuantity}
             addToWishlist={addToWishlist}
             removeFromWishlist={removeFromWishlist}
             isInWishlist={isInWishlist}
             getCartItemQuantity={getCartItemQuantity}
+            rateBook={rateBook} 
           />
         ))}
       </div>

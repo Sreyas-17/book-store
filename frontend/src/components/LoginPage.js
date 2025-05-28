@@ -1,19 +1,33 @@
-// src/components/LoginPage.js - Clean working version
-import React, { useState } from 'react';
-import { Book } from 'lucide-react';
+import React, { useState } from "react";
+import { Book } from "lucide-react";
 
 const LoginPage = ({ handleLogin, setCurrentPage, loading }) => {
-  const [email, setEmail] = useState(); // Pre-fill for testing
-  const [password, setPassword] = useState(); // Pre-fill for testing
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [error, setError] = useState("");
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    
-    const response = await handleLogin(email, password);
-    if (!response.success) {
-      setError(response.message);
+    setError("");
+
+    console.log("Submitting login form...");
+
+    try {
+      const response = await handleLogin(email, password);
+      console.log("Login response in LoginPage:", response);
+
+      if (response && response.success) {
+        console.log("Login successful, navigating to home...");
+        setCurrentPage("home"); // or navigateTo('home') if using navigation hook
+      } else {
+        const errorMessage =
+          response?.message || "Login failed. Please try again.";
+        console.log("Login failed:", errorMessage);
+        setError(errorMessage);
+      }
+    } catch (error) {
+      console.error("Login error in component:", error);
+      setError("Network error. Please check your connection and try again.");
     }
   };
 
@@ -51,26 +65,27 @@ const LoginPage = ({ handleLogin, setCurrentPage, loading }) => {
             />
           </div>
 
-          {error && (
-            <div className="alert alert-error">
-              {error}
-            </div>
-          )}
+          {error && <div className="alert alert-error">{error}</div>}
 
           <button
             type="submit"
             disabled={loading}
             className="btn btn-primary"
-            style={{width: '100%', padding: '12px'}}
+            style={{ width: "100%", padding: "12px" }}
           >
-            {loading ? 'Signing In...' : 'Sign In'}
+            {loading ? "Signing In..." : "Sign In"}
           </button>
         </form>
 
         <div className="auth-link">
           <button
-            onClick={() => setCurrentPage('register')}
-            style={{background: 'none', border: 'none', color: '#2563eb', cursor: 'pointer'}}
+            onClick={() => setCurrentPage("register")}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#2563eb",
+              cursor: "pointer",
+            }}
           >
             Don't have an account? Sign up
           </button>

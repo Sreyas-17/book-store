@@ -7,6 +7,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 @Service
@@ -90,4 +93,45 @@ public class BookService {
         book.setImageUrl(imageUrl);
         return bookRepository.save(book);
     }
+
+    public Book rateBook(Long bookId, Integer rating) {
+    try {
+        System.out.println("📚 BookService: Rating book " + bookId + " with " + rating + " stars");
+        
+        // Find the book
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(() -> new RuntimeException("Book not found with id: " + bookId));
+        
+        System.out.println("📚 Found book: " + book.getTitle());
+        System.out.println("📚 Current rating: " + book.getRatingAvg() + " (Total ratings: " + book.getTotalRatings() + ")");
+        
+        // Calculate new average rating
+        BigDecimal currentTotalPoints = book.getRatingAvg()
+                .multiply(BigDecimal.valueOf(book.getTotalRatings()));
+        
+        BigDecimal newTotalPoints = currentTotalPoints.add(BigDecimal.valueOf(rating));
+        int newTotalRatings = book.getTotalRatings() + 1;
+        
+        BigDecimal newAverage = newTotalPoints.divide(
+                BigDecimal.valueOf(newTotalRatings), 
+                2, 
+                RoundingMode.HALF_UP
+        );
+        
+        // Update book
+        book.setRatingAvg(newAverage);
+        book.setTotalRatings(newTotalRatings);
+        
+        // Save the book
+        Book savedBook = bookRepository.save(book);
+        
+        System.out.println("📚 Book rated successfully - New average: " + newAverage + ", Total ratings: " + newTotalRatings);
+        
+        return savedBook;
+        
+    } catch (Exception e) {
+        System.err.println("❌ BookService: Error rating book: " + e.getMessage());
+        throw new RuntimeException("Failed to rate book: " + e.getMessage(), e);
+    }
+}
 }

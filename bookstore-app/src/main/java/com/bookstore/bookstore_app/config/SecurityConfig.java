@@ -1,4 +1,3 @@
-// Update your SecurityConfig.java with this version
 package com.bookstore.bookstore_app.config;
 
 import org.springframework.context.annotation.Bean;
@@ -34,10 +33,8 @@ public class SecurityConfig {
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-                // Disable form login and HTTP basic auth
                 .formLogin(form -> form.disable())
                 .httpBasic(basic -> basic.disable())
-                // Handle authentication exceptions properly
                 .exceptionHandling(exceptions -> exceptions
                         .authenticationEntryPoint((request, response, authException) -> {
                             response.setContentType("application/json");
