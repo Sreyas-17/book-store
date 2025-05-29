@@ -138,3 +138,9 @@
 2025-05-29 11:18:09.780 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.OrderService - Found 8 orders for user ID: 1
 2025-05-29 11:18:09.824 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
 2025-05-29 11:18:09.828 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
+2025-05-29 14:57:59.828 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching book by ID: 1
+2025-05-29 14:57:59.829 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Found book: Test Book by null
+2025-05-29 15:04:19.588 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching book by ID: 1
+2025-05-29 15:04:19.592 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Found book: Test Book by null
+2025-05-29 15:08:10.957 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching book by ID: 1
+2025-05-29 15:08:10.959 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Found book: Test Book by null

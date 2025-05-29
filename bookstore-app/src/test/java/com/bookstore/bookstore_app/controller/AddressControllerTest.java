@@ -2,28 +2,39 @@ package com.bookstore.bookstore_app.controller;
 
 import com.bookstore.bookstore_app.dto.ApiResponse;
 import com.bookstore.bookstore_app.entity.Address;
+import com.bookstore.bookstore_app.entity.User;
+import com.bookstore.bookstore_app.repository.AddressRepository;
+import com.bookstore.bookstore_app.repository.UserRepository;
 import com.bookstore.bookstore_app.service.AddressService;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.when;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class AddressControllerTest {
 
     @Mock
     private AddressService addressService;
+
+    @Mock
+    private UserRepository userRepository;
+
+    @Mock
+    private AddressRepository addressRepository;
 
     @InjectMocks
     private AddressController addressController;
@@ -54,9 +65,15 @@ public class AddressControllerTest {
         addressData.put("country", "Test Country");
         addressData.put("postalCode", "12345");
 
+        User user = new User();
+        user.setId(1L);
+        user.setEmail("test@example.com");
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+
         Address address = new Address();
         address.setId(1L);
-        when(addressService.addAddress(any())).thenReturn(address);
+        address.setUser(user);
+        when(addressRepository.save(any(Address.class))).thenReturn(address);
 
         ResponseEntity<ApiResponse<Address>> response = addressController.addAddress(addressData);
 
@@ -87,5 +104,4 @@ public class AddressControllerTest {
         assertEquals(200, response.getStatusCode().value());
         assertEquals("Address deleted successfully", response.getBody().getMessage());
     }
-} 
- 
+}
