@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/admin")
@@ -105,4 +106,64 @@ public class AdminController {
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }
+
+    // Add these methods to your existing AdminController.java
+
+@PutMapping("/vendors/{vendorId}/approve")
+public ResponseEntity<ApiResponse<Vendor>> approveVendor(@PathVariable Long vendorId) {
+    logger.info("PUT /api/admin/vendors/{}/approve - Approving vendor", vendorId);
+    
+    try {
+        Vendor vendor = adminService.approveVendor(vendorId);
+        logger.info("Vendor approved successfully via API - Vendor ID: {}, Business: {}", 
+                   vendorId, vendor.getBusinessName());
+        return ResponseEntity.ok(ApiResponse.success("Vendor approved", vendor));
+    } catch (Exception e) {
+        logger.error("Error approving vendor via API - Vendor ID: {} - Error: {}", vendorId, e.getMessage(), e);
+        return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+    }
+}
+
+@PutMapping("/vendors/{vendorId}/disapprove")
+public ResponseEntity<ApiResponse<Vendor>> disapproveVendor(@PathVariable Long vendorId) {
+    logger.info("PUT /api/admin/vendors/{}/disapprove - Disapproving vendor", vendorId);
+    
+    try {
+        Vendor vendor = adminService.disapproveVendor(vendorId);
+        logger.info("Vendor disapproved successfully via API - Vendor ID: {}, Business: {}", 
+                   vendorId, vendor.getBusinessName());
+        return ResponseEntity.ok(ApiResponse.success("Vendor disapproved", vendor));
+    } catch (Exception e) {
+        logger.error("Error disapproving vendor via API - Vendor ID: {} - Error: {}", vendorId, e.getMessage(), e);
+        return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+    }
+}
+
+@GetMapping("/vendors/pending")
+public ResponseEntity<ApiResponse<List<Vendor>>> getPendingVendors() {
+    logger.info("GET /api/admin/vendors/pending - Fetching pending vendors");
+    
+    try {
+        List<Vendor> vendors = adminService.getPendingVendors();
+        logger.info("Retrieved {} pending vendors via API", vendors.size());
+        return ResponseEntity.ok(ApiResponse.success("Pending vendors retrieved", vendors));
+    } catch (Exception e) {
+        logger.error("Error fetching pending vendors via API - Error: {}", e.getMessage(), e);
+        return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+    }
+}
+
+@GetMapping("/dashboard")
+public ResponseEntity<ApiResponse<Map<String, Object>>> getAdminDashboard() {
+    logger.info("GET /api/admin/dashboard - Fetching admin dashboard");
+    
+    try {
+        Map<String, Object> dashboard = adminService.getAdminDashboard();
+        logger.info("Admin dashboard retrieved successfully");
+        return ResponseEntity.ok(ApiResponse.success("Dashboard data retrieved", dashboard));
+    } catch (Exception e) {
+        logger.error("Error fetching admin dashboard via API - Error: {}", e.getMessage(), e);
+        return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+    }
+}
 }

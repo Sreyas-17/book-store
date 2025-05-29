@@ -9,8 +9,10 @@ import com.bookstore.bookstore_app.repository.VendorRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class AdminService {
@@ -115,6 +117,110 @@ public class AdminService {
             return vendors;
         } catch (Exception e) {
             logger.error("Admin failed to fetch all vendors - Error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    public Vendor approveVendor(Long vendorId) {
+        logger.info("Approving vendor with ID: {}", vendorId);
+        try {
+            Vendor vendor = vendorRepository.findById(vendorId)
+                    .orElseThrow(() -> {
+                        logger.warn("Vendor not found for approval with ID: {}", vendorId);
+                        return new RuntimeException("Vendor not found");
+                    });
+
+            vendor.setApproved(true);
+            Vendor savedVendor = vendorRepository.save(vendor);
+            logger.info("Vendor approved successfully - ID: {}, Business: {}", 
+                    savedVendor.getId(), savedVendor.getBusinessName());
+            return savedVendor;
+        } catch (Exception e) {
+            logger.error("Failed to approve vendor with ID: {} - Error: {}", vendorId, e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    public Vendor disapproveVendor(Long vendorId) {
+        logger.info("Disapproving vendor with ID: {}", vendorId);
+        try {
+            Vendor vendor = vendorRepository.findById(vendorId)
+                    .orElseThrow(() -> {
+                        logger.warn("Vendor not found for disapproval with ID: {}", vendorId);
+                        return new RuntimeException("Vendor not found");
+                    });
+
+            vendor.setApproved(false);
+            Vendor savedVendor = vendorRepository.save(vendor);
+            logger.info("Vendor disapproved successfully - ID: {}, Business: {}", 
+                    savedVendor.getId(), savedVendor.getBusinessName());
+            return savedVendor;
+        } catch (Exception e) {
+            logger.error("Failed to disapprove vendor with ID: {} - Error: {}", vendorId, e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    public List<Vendor> getPendingVendors() {
+        logger.debug("Fetching pending vendors for approval");
+        try {
+            List<Vendor> pendingVendors = vendorRepository.findByIsApprovedFalse();
+            logger.info("Found {} pending vendors for approval", pendingVendors.size());
+            return pendingVendors;
+        } catch (Exception e) {
+            logger.error("Failed to fetch pending vendors - Error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    public Map<String, Object> getAdminDashboard() {
+        logger.debug("Generating admin dashboard data");
+        try {
+            // Get statistics
+            long totalBooks = bookRepository.count();
+            long approvedBooks = bookRepository.findByIsApprovedTrue().size();
+            long pendingBooks = bookRepository.findByIsApprovedFalse().size();
+            
+            long totalVendors = vendorRepository.count();
+            long approvedVendors = vendorRepository.findByIsApprovedTrue().size();
+            long pendingVendors = vendorRepository.findByIsApprovedFalse().size();
+            
+            long totalReviews = reviewRepository.count();
+            long approvedReviews = reviewRepository.findByIsApprovedTrue().size();
+            long pendingReviews = reviewRepository.findByIsApprovedFalse().size();
+
+            Map<String, Object> dashboard = Map.of(
+                "books", Map.of(
+                    "total", totalBooks,
+                    "approved", approvedBooks,
+                    "pending", pendingBooks
+                ),
+                "vendors", Map.of(
+                    "total", totalVendors,
+                    "approved", approvedVendors,
+                    "pending", pendingVendors
+                ),
+                "reviews", Map.of(
+                    "total", totalReviews,
+                    "approved", approvedReviews,
+                    "pending", pendingReviews
+                ),
+                "recentBooks", bookRepository.findByOrderByCreatedAtDesc(
+                    PageRequest.of(0, 5)
+                ).getContent(),
+                "pendingApprovals", Map.of(
+                    "books", Math.min(pendingBooks, 5),
+                    "vendors", Math.min(pendingVendors, 5),
+                    "reviews", Math.min(pendingReviews, 5)
+                )
+            );
+
+            logger.info("Admin dashboard generated - {} books, {} vendors, {} reviews", 
+                    totalBooks, totalVendors, totalReviews);
+            return dashboard;
+            
+        } catch (Exception e) {
+            logger.error("Failed to generate admin dashboard - Error: {}", e.getMessage(), e);
             throw e;
         }
     }
