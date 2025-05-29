@@ -539,3 +539,393 @@ java.lang.NullPointerException: Cannot invoke "com.bookstore.bookstore_app.repos
 2025-05-29 15:08:10.813 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
 2025-05-29 15:08:10.821 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
 2025-05-29 15:08:10.822 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-29 15:16:16.918 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-29 15:16:16.925 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-29 15:16:16.975 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-29 15:16:16.976 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-29 15:16:16.976 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-29 15:16:16.977 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-29 15:16:16.978 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-29 15:16:16.987 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-29 15:16:16.988 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-29 15:16:16.995 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-29 15:16:16.996 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-29 15:16:17.146 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-29 15:16:17.147 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-29 15:16:17.256 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-29 15:16:17.256 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-29 15:16:17.272 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-29 15:16:17.272 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-29 15:16:17.289 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-29 15:16:17.289 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-29 15:16:17.302 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-29 15:16:17.302 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-29 15:16:17.302 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-29 15:16:17.315 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-29 15:16:17.316 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-29 15:16:17.330 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-29 15:16:17.332 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-29 15:16:17.343 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-29 15:16:17.344 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-29 15:16:17.356 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-29 15:16:17.357 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-29 15:16:17.368 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-29 15:16:17.369 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-29 15:16:17.369 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-29 15:16:17.370 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-29 15:16:17.382 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-29 15:16:17.384 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-29 15:16:17.466 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-29 15:16:17.466 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-29 15:16:17.476 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-29 15:16:17.476 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-29 15:16:17.486 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-29 15:16:17.488 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:16:17.502 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-29 15:16:17.504 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-29 15:16:17.515 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-29 15:16:17.516 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-29 15:16:17.516 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-29 15:16:17.529 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-29 15:16:17.530 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-29 15:16:17.613 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-29 15:16:17.614 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-29 15:16:17.625 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-29 15:16:17.626 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-29 15:16:17.636 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-29 15:16:17.636 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-29 15:16:17.645 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-29 15:16:17.646 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-29 15:16:17.774 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-29 15:16:17.774 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-29 15:16:17.783 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-29 15:16:17.784 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User login successful via API - Email: test@example.com
+2025-05-29 15:16:17.792 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-29 15:16:17.793 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-29 15:16:17.802 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-29 15:16:17.803 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-29 15:16:17.813 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-29 15:16:17.814 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-29 15:16:17.822 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-29 15:16:17.834 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-29 15:16:17.835 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-29 15:16:17.914 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-29 15:16:17.915 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-29 15:16:17.922 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:16:17.922 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-29 15:16:17.930 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:16:17.931 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:16:17.940 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-29 15:16:17.941 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:51:07.127 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-29 15:51:07.128 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-29 15:51:07.158 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-29 15:51:07.158 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-29 15:51:07.158 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-29 15:51:07.158 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-29 15:51:07.158 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-29 15:51:07.172 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-29 15:51:07.172 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-29 15:51:07.172 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-29 15:51:07.172 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-29 15:51:07.315 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-29 15:51:07.315 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-29 15:51:07.413 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-29 15:51:07.413 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-29 15:51:07.435 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-29 15:51:07.435 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-29 15:51:07.446 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-29 15:51:07.446 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-29 15:51:07.469 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-29 15:51:07.469 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-29 15:51:07.469 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-29 15:51:07.483 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-29 15:51:07.483 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-29 15:51:07.494 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-29 15:51:07.494 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-29 15:51:07.509 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-29 15:51:07.509 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-29 15:51:07.522 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-29 15:51:07.522 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-29 15:51:07.537 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-29 15:51:07.537 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-29 15:51:07.539 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-29 15:51:07.539 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-29 15:51:07.551 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-29 15:51:07.551 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-29 15:51:07.636 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-29 15:51:07.639 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-29 15:51:07.650 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-29 15:51:07.650 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-29 15:51:07.662 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-29 15:51:07.662 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:51:07.671 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-29 15:51:07.671 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-29 15:51:07.686 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-29 15:51:07.686 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-29 15:51:07.686 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-29 15:51:07.701 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-29 15:51:07.703 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-29 15:51:07.779 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-29 15:51:07.781 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-29 15:51:07.791 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-29 15:51:07.791 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-29 15:51:07.803 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-29 15:51:07.803 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-29 15:51:07.819 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-29 15:51:07.821 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-29 15:51:07.951 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-29 15:51:07.951 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-29 15:51:07.964 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-29 15:51:07.964 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User login successful via API - Email: test@example.com
+2025-05-29 15:51:07.969 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-29 15:51:07.969 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-29 15:51:07.984 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-29 15:51:07.987 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-29 15:51:07.999 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-29 15:51:07.999 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-29 15:51:08.010 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-29 15:51:08.021 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-29 15:51:08.021 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-29 15:51:08.088 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-29 15:51:08.088 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-29 15:51:08.102 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:51:08.102 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-29 15:51:08.114 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:51:08.114 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:51:08.128 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-29 15:51:08.128 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:54:21.795 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-29 15:54:21.795 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-29 15:54:21.830 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-29 15:54:21.830 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-29 15:54:21.830 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-29 15:54:21.830 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-29 15:54:21.830 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-29 15:54:21.853 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-29 15:54:21.855 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-29 15:54:21.858 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-29 15:54:21.864 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-29 15:54:22.046 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-29 15:54:22.048 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-29 15:54:22.179 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-29 15:54:22.179 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-29 15:54:22.200 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-29 15:54:22.200 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-29 15:54:22.220 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-29 15:54:22.220 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-29 15:54:22.239 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-29 15:54:22.239 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-29 15:54:22.241 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-29 15:54:22.252 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-29 15:54:22.252 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-29 15:54:22.269 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-29 15:54:22.269 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-29 15:54:22.285 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-29 15:54:22.285 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-29 15:54:22.299 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-29 15:54:22.299 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-29 15:54:22.316 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-29 15:54:22.316 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-29 15:54:22.316 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-29 15:54:22.316 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-29 15:54:22.331 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-29 15:54:22.331 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-29 15:54:22.438 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-29 15:54:22.438 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-29 15:54:22.447 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-29 15:54:22.447 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-29 15:54:22.465 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-29 15:54:22.465 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:54:22.480 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-29 15:54:22.482 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-29 15:54:22.494 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-29 15:54:22.494 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-29 15:54:22.494 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-29 15:54:22.512 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-29 15:54:22.512 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-29 15:54:22.607 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-29 15:54:22.609 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-29 15:54:22.622 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-29 15:54:22.622 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-29 15:54:22.638 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-29 15:54:22.638 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-29 15:54:22.650 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-29 15:54:22.650 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-29 15:54:22.859 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-29 15:54:22.859 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-29 15:54:22.872 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-29 15:54:22.874 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User login successful via API - Email: test@example.com
+2025-05-29 15:54:22.892 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-29 15:54:22.894 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-29 15:54:22.912 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-29 15:54:22.912 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-29 15:54:22.929 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-29 15:54:22.929 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-29 15:54:22.947 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-29 15:54:22.965 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-29 15:54:22.965 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-29 15:54:23.115 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-29 15:54:23.116 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-29 15:54:23.128 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:54:23.128 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-29 15:54:23.144 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:54:23.144 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-29 15:54:23.157 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-29 15:54:23.159 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 16:01:07.375 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-29 16:01:07.389 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-29 16:01:07.411 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-29 16:01:07.411 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-29 16:01:07.411 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-29 16:01:07.411 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-29 16:01:07.411 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-29 16:01:07.427 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-29 16:01:07.427 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-29 16:01:07.431 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-29 16:01:07.431 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-29 16:01:07.571 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-29 16:01:07.571 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-29 16:01:07.705 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-29 16:01:07.705 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-29 16:01:07.718 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-29 16:01:07.720 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-29 16:01:07.736 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-29 16:01:07.736 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-29 16:01:07.753 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-29 16:01:07.753 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-29 16:01:07.753 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-29 16:01:07.766 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-29 16:01:07.766 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-29 16:01:07.780 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-29 16:01:07.780 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-29 16:01:07.792 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-29 16:01:07.795 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-29 16:01:07.808 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-29 16:01:07.808 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-29 16:01:07.821 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-29 16:01:07.822 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-29 16:01:07.822 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-29 16:01:07.822 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-29 16:01:07.837 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-29 16:01:07.839 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-29 16:01:07.920 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-29 16:01:07.920 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-29 16:01:07.932 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-29 16:01:07.934 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-29 16:01:07.942 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-29 16:01:07.942 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 16:01:07.956 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-29 16:01:07.956 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-29 16:01:07.968 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-29 16:01:07.968 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-29 16:01:07.968 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-29 16:01:07.979 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-29 16:01:07.979 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-29 16:01:08.048 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-29 16:01:08.048 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-29 16:01:08.056 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-29 16:01:08.056 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-29 16:01:08.070 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-29 16:01:08.070 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-29 16:01:08.080 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-29 16:01:08.080 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-29 16:01:08.190 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-29 16:01:08.206 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-29 16:01:08.211 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-29 16:01:08.211 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User login successful via API - Email: test@example.com
+2025-05-29 16:01:08.221 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-29 16:01:08.221 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-29 16:01:08.231 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-29 16:01:08.231 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-29 16:01:08.231 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-29 16:01:08.231 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-29 16:01:08.246 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-29 16:01:08.253 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-29 16:01:08.253 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-29 16:01:08.331 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-29 16:01:08.331 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-29 16:01:08.339 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-29 16:01:08.339 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-29 16:01:08.348 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-29 16:01:08.348 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-29 16:01:08.355 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-29 16:01:08.355 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 16:04:17.624 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-29 16:04:17.630 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-29 16:04:17.658 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-29 16:04:17.659 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-29 16:04:17.659 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-29 16:04:17.660 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-29 16:04:17.661 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-29 16:04:17.669 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-29 16:04:17.669 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-29 16:04:17.678 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-29 16:04:17.679 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-29 16:04:17.802 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-29 16:04:17.802 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-29 16:04:17.919 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-29 16:04:17.920 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-29 16:04:17.934 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-29 16:04:17.935 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-29 16:04:17.947 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-29 16:04:17.948 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-29 16:04:17.958 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-29 16:04:17.959 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-29 16:04:17.959 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-29 16:04:17.972 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-29 16:04:17.972 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-29 16:04:17.985 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-29 16:04:17.986 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-29 16:04:17.999 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-29 16:04:18.000 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-29 16:04:18.013 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-29 16:04:18.014 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-29 16:04:18.025 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-29 16:04:18.026 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-29 16:04:18.026 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-29 16:04:18.027 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-29 16:04:18.037 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-29 16:04:18.038 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-29 16:04:18.107 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-29 16:04:18.108 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-29 16:04:18.118 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-29 16:04:18.119 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-29 16:04:18.129 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-29 16:04:18.130 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-29 16:04:18.142 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-29 16:04:18.143 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-29 16:04:18.151 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-29 16:04:18.152 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-29 16:04:18.152 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-29 16:04:18.161 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-29 16:04:18.161 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-29 16:04:18.237 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-29 16:04:18.237 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-29 16:04:18.246 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-29 16:04:18.246 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-29 16:04:18.253 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-29 16:04:18.254 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-29 16:04:18.261 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-29 16:04:18.262 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-29 16:04:18.367 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-29 16:04:18.368 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-29 16:04:18.375 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-29 16:04:18.375 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User login successful via API - Email: test@example.com
+2025-05-29 16:04:18.382 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-29 16:04:18.383 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-29 16:04:18.390 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-29 16:04:18.390 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-29 16:04:18.399 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-29 16:04:18.399 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-29 16:04:18.406 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-29 16:04:18.415 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-29 16:04:18.415 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-29 16:04:18.492 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-29 16:04:18.492 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-29 16:04:18.500 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-29 16:04:18.501 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-29 16:04:18.510 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-29 16:04:18.511 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-29 16:04:18.519 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-29 16:04:18.520 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
