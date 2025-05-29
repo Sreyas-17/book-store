@@ -39,18 +39,23 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<ApiResponse<String>> login(@Valid @RequestBody LoginRequest request) {
+    public ResponseEntity<ApiResponse<LoginResponse>> login(@Valid @RequestBody LoginRequest request) {
         logger.info("POST /api/auth/login - Login attempt for email: {}", request.getEmail());
-        
+    
         try {
-            String token = userService.login(request);
-            logger.info("User login successful via API - Email: {}", request.getEmail());
-            return ResponseEntity.ok(ApiResponse.success("Login successful", token));
+        LoginResponse loginResponse = userService.loginWithRoleInfo(request);
+        
+        logger.info("User login successful via API - Email: {}, Role: {}", 
+                   request.getEmail(), loginResponse.getRole());
+        
+        return ResponseEntity.ok(ApiResponse.success("Login successful", loginResponse));
+        
         } catch (Exception e) {
-            logger.error("Error during login via API - Email: {} - Error: {}", request.getEmail(), e.getMessage(), e);
+            logger.error("Error during login via API - Email: {} - Error: {}", 
+                    request.getEmail(), e.getMessage(), e);
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
-        }
     }
+}
 
     @GetMapping("/profile")
     public ResponseEntity<ApiResponse<User>> getUserProfile(@RequestHeader(value = "Authorization", required = false) String authHeader) {
@@ -141,5 +146,35 @@ public class UserController {
     public ResponseEntity<ApiResponse<String>> logout() {
         logger.info("POST /api/auth/logout - User logout");
         return ResponseEntity.ok(ApiResponse.success("Logged out successfully"));
+    }
+
+    @PostMapping("/register-vendor")
+    public ResponseEntity<ApiResponse<String>> registerAsVendor(@Valid @RequestBody RegisterRequest request) {
+        logger.info("POST /api/auth/register-vendor - Vendor registration attempt for email: {}", request.getEmail());
+    
+        try {
+            String message = userService.registerWithRole(request, User.Role.VENDOR);
+            logger.info("Vendor user registration successful via API - Email: {}", request.getEmail());
+            return ResponseEntity.ok(ApiResponse.success(message));
+        } catch (Exception e) {
+            logger.error("Error during vendor registration via API - Email: {} - Error: {}", 
+                    request.getEmail(), e.getMessage(), e);
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        }
+    }
+
+    @PostMapping("/register-admin")
+    public ResponseEntity<ApiResponse<String>> registerAsAdmin(@Valid @RequestBody RegisterRequest request) {
+        logger.info("POST /api/auth/register-admin - Admin registration attempt for email: {}", request.getEmail());
+
+        try {
+            String message = userService.registerWithRole(request, User.Role.ADMIN);
+            logger.info("Admin user registration successful via API - Email: {}", request.getEmail());
+            return ResponseEntity.ok(ApiResponse.success(message));
+        } catch (Exception e) {
+            logger.error("Error during admin registration via API - Email: {} - Error: {}",
+                    request.getEmail(), e.getMessage(), e);
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        }
     }
 }

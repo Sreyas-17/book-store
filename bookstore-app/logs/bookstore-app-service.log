@@ -138,3 +138,78 @@
 2025-05-29 11:18:09.780 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.OrderService - Found 8 orders for user ID: 1
 2025-05-29 11:18:09.824 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
 2025-05-29 11:18:09.828 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
+2025-05-29 14:18:33.394 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: john@example.com
+2025-05-29 14:18:33.783 [http-nio-8080-exec-4] WARN  com.bookstore.bookstore_app.service.UserService - Registration failed - Email already exists: john@example.com
+2025-05-29 14:19:13.863 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: testuser@example.com
+2025-05-29 14:19:14.351 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 5 and email: testuser@example.com
+2025-05-29 14:19:26.275 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: testuser@example.com
+2025-05-29 14:19:26.562 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for testuser@example.com with role: USER
+2025-05-29 14:21:20.140 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: vendor@example.com and role: VENDOR
+2025-05-29 14:21:20.321 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 6, email: vendor@example.com, and role: VENDOR
+2025-05-29 14:21:49.854 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: vendor@example.com
+2025-05-29 14:21:50.015 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for vendor@example.com with role: VENDOR
+2025-05-29 14:24:05.471 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: admin@example.com
+2025-05-29 14:24:05.564 [http-nio-8080-exec-6] WARN  com.bookstore.bookstore_app.service.UserService - Login failed - Invalid password for user: admin@example.com
+2025-05-29 14:41:07.695 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: admin@example.com and role: ADMIN
+2025-05-29 14:41:08.164 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 8, email: admin@example.com, and role: ADMIN
+2025-05-29 14:41:36.133 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: admin@example.com
+2025-05-29 14:41:36.443 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for admin@example.com with role: ADMIN
+2025-05-29 14:44:38.182 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-29 14:44:38.222 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
+2025-05-29 14:54:12.671 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.UserService - Fetching user by email: vendor@example.com
+2025-05-29 14:54:12.863 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.UserService - User found with email: vendor@example.com and ID: 6
+2025-05-29 14:58:36.377 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.UserService - Fetching user by email: vendor@example.com
+2025-05-29 14:58:36.562 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.UserService - User found with email: vendor@example.com and ID: 6
+2025-05-29 15:00:33.002 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.UserService - Fetching user by email: vendor@example.com
+2025-05-29 15:00:33.185 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.UserService - User found with email: vendor@example.com and ID: 6
+2025-05-29 15:10:27.913 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.CartService - Adding item to cart - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-29 15:10:28.418 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Created new cart item
+2025-05-29 15:10:28.627 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.CartService - Item added to cart successfully - Cart Item ID: 29
+2025-05-29 15:11:20.252 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
+2025-05-29 15:11:20.281 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.CartService - Found 1 cart items for User ID: 1
+2025-05-29 15:12:02.187 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-29 15:12:02.242 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
+2025-05-29 15:13:09.959 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: "The Great Gatsby"
+2025-05-29 15:13:10.056 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: "The Great Gatsby"
+2025-05-29 15:14:01.530 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.AdminService - Generating admin dashboard data
+2025-05-29 15:14:01.939 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.AdminService - Admin dashboard generated - 2 books, 0 vendors, 0 reviews
+2025-05-29 15:14:51.212 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending books for approval
+2025-05-29 15:14:51.229 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.AdminService - Found 1 pending books for approval
+2025-05-29 15:30:34.846 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.VendorService - Registering vendor for user ID: 6
+2025-05-29 15:30:35.303 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.VendorService - Vendor registration completed - ID: 1, Business: Test Bookstore
+2025-05-29 15:33:49.145 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending vendors for approval
+2025-05-29 15:33:49.179 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.AdminService - Found 1 pending vendors for approval
+2025-05-29 15:34:45.504 [http-nio-8080-exec-8] DEBUG com.bookstore.bookstore_app.service.VendorService - Fetching vendor profile for user ID: 6
+2025-05-29 15:35:54.580 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.VendorService - Vendor adding book - User ID: 6, Title: Test Book
+2025-05-29 15:35:54.591 [http-nio-8080-exec-2] WARN  com.bookstore.bookstore_app.service.VendorService - Unapproved vendor attempting to add book: 6
+2025-05-29 15:37:46.497 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending vendors for approval
+2025-05-29 15:37:46.507 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.AdminService - Found 1 pending vendors for approval
+2025-05-29 15:38:17.534 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.VendorService - Vendor adding book - User ID: 6, Title: Test Book
+2025-05-29 15:38:17.549 [http-nio-8080-exec-5] WARN  com.bookstore.bookstore_app.service.VendorService - Unapproved vendor attempting to add book: 6
+2025-05-29 15:39:21.586 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.AdminService - Approving vendor with ID: 1
+2025-05-29 15:39:21.650 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.AdminService - Vendor approved successfully - ID: 1, Business: Test Bookstore
+2025-05-29 15:40:11.151 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.VendorService - Vendor adding book - User ID: 6, Title: Test Book
+2025-05-29 15:40:11.179 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.VendorService - Book added successfully - ID: 3, Title: Test Book, Vendor: Test Bookstore
+2025-05-29 15:40:37.910 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.VendorService - Fetching books for vendor user ID: 6
+2025-05-29 15:40:37.926 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.VendorService - Retrieved 1 books for vendor: Test Bookstore
+2025-05-29 15:41:52.205 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.OrderService - Creating order for user ID: 1 with address ID: 1
+2025-05-29 15:41:52.317 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
+2025-05-29 15:41:52.340 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Found 1 cart items for User ID: 1
+2025-05-29 15:41:52.342 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Calculating cart total for User ID: 1
+2025-05-29 15:41:52.360 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Cart total calculated for User ID: 1 - Total: 31.98
+2025-05-29 15:41:52.361 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.OrderService - Order details - Number: ORD-B241603E, Total: 31.98, Items: 1
+2025-05-29 15:41:52.383 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.CartService - Clearing cart for User ID: 1
+2025-05-29 15:41:52.491 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.CartService - Cart cleared successfully for User ID: 1
+2025-05-29 15:41:52.494 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.OrderService - Order created successfully - Order ID: 12, Number: ORD-B241603E, Total: 31.98
+2025-05-29 15:42:12.875 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
+2025-05-29 15:42:12.889 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.OrderService - Found 9 orders for user ID: 1
+2025-05-29 15:42:39.637 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.WishlistService - Adding book to wishlist - User ID: 1, Book ID: 1
+2025-05-29 15:42:39.716 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.WishlistService - Book added to wishlist successfully - Wishlist ID: 13, User ID: 1, Book: The Great Gatsby
+2025-05-29 15:43:04.220 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 1
+2025-05-29 15:43:04.240 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 2 items in wishlist for user ID: 1
+2025-05-29 15:44:05.037 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 1
+2025-05-29 15:44:05.053 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.AddressService - Found 3 addresses for user ID: 1
+2025-05-29 15:44:47.093 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Rating book ID: 1 with 5 stars
+2025-05-29 15:44:47.104 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.BookService - Found book for rating: The Great Gatsby
+2025-05-29 15:44:47.104 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.BookService - Current rating: 4.00 (Total ratings: 1)
+2025-05-29 15:44:47.137 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Book rated successfully - New average: 4.50, Total ratings: 2
