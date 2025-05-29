@@ -28,16 +28,17 @@ public class AddressController {
     @Autowired
     private AddressRepository addressRepository;
 
-    @Autowired 
+    @Autowired
     private UserRepository userRepository;
 
+    // Endpoint to add a new address
     @PostMapping("/add")
     public ResponseEntity<ApiResponse<Address>> addAddress(@RequestBody Map<String, Object> addressData) {
         logger.info("POST /api/addresses/add - Adding new address");
         logger.debug("Address data received: {}", addressData);
-        
+
         try {
-            // Extract user ID from the request
+            // Extract user ID from the request body (from either "userId" or "user.id")
             Long userId = extractUserIdFromRequest(addressData);
 
             if (userId == null) {
@@ -48,10 +49,9 @@ public class AddressController {
 
             logger.debug("User ID extracted: {}", userId);
 
-            // Create final variable for lambda
             final Long finalUserId = userId;
 
-            // Find the user
+            // Look up the user by ID
             User user = userRepository.findById(finalUserId)
                     .orElseThrow(() -> {
                         logger.error("Address creation failed - User not found with ID: {}", finalUserId);
@@ -60,7 +60,7 @@ public class AddressController {
 
             logger.debug("User found: {}", user.getEmail());
 
-            // Create new address
+            // Create and populate Address object from request data
             Address address = new Address();
             address.setUser(user);
             address.setAddressLine1(addressData.get("addressLine1").toString());
@@ -78,7 +78,7 @@ public class AddressController {
                 address.setDefault(Boolean.valueOf(addressData.get("default").toString()));
             }
 
-            // Save address
+            // Save the address to the database
             Address savedAddress = addressRepository.save(address);
             logger.info("Address added successfully with ID: {} for user: {}", savedAddress.getId(), user.getEmail());
 
@@ -91,7 +91,7 @@ public class AddressController {
         }
     }
 
-    // Helper method to extract user ID
+    // Helper method to extract user ID from incoming request body
     private Long extractUserIdFromRequest(Map<String, Object> addressData) {
         if (addressData.get("user") instanceof Map) {
             @SuppressWarnings("unchecked")
@@ -105,10 +105,11 @@ public class AddressController {
         return null;
     }
 
+    // Endpoint to get all addresses for a specific user
     @GetMapping("/user/{userId}")
     public ResponseEntity<ApiResponse<List<Address>>> getUserAddresses(@PathVariable Long userId) {
         logger.info("GET /api/addresses/user/{} - Fetching user addresses", userId);
-        
+
         try {
             List<Address> addresses = addressService.getUserAddresses(userId);
             logger.info("Retrieved {} addresses for user ID: {}", addresses.size(), userId);
@@ -119,10 +120,11 @@ public class AddressController {
         }
     }
 
+    // Endpoint to update an address by ID
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<Address>> updateAddress(@PathVariable Long id, @RequestBody Address address) {
         logger.info("PUT /api/addresses/{} - Updating address", id);
-        
+
         try {
             Address updatedAddress = addressService.updateAddress(id, address);
             logger.info("Address updated successfully with ID: {}", id);
@@ -133,10 +135,11 @@ public class AddressController {
         }
     }
 
+    // Endpoint to delete an address by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<String>> deleteAddress(@PathVariable Long id) {
         logger.info("DELETE /api/addresses/{} - Deleting address", id);
-        
+
         try {
             addressService.deleteAddress(id);
             logger.info("Address deleted successfully with ID: {}", id);
