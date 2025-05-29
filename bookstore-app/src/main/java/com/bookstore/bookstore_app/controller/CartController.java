@@ -1,9 +1,10 @@
-// Fixed CartController.java - Add proper error handling and logging
 package com.bookstore.bookstore_app.controller;
 
 import com.bookstore.bookstore_app.dto.ApiResponse;
 import com.bookstore.bookstore_app.entity.CartItem;
 import com.bookstore.bookstore_app.service.CartService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,8 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class CartController {
 
+    private static final Logger logger = LogManager.getLogger(CartController.class);
+
     @Autowired
     private CartService cartService;
 
@@ -23,14 +26,15 @@ public class CartController {
             @RequestParam Long userId,
             @RequestParam Long bookId,
             @RequestParam(defaultValue = "1") int quantity) {
+        logger.info("POST /api/cart/add - User ID: {}, Book ID: {}, Quantity: {}", userId, bookId, quantity);
+        
         try {
-            System.out.println("🛒 CartController: Adding to cart - userId: " + userId + ", bookId: " + bookId + ", quantity: " + quantity);
             CartItem cartItem = cartService.addToCart(userId, bookId, quantity);
-            System.out.println("✅ CartController: Item added successfully - cartItemId: " + cartItem.getId());
+            logger.info("Item added to cart successfully via API - Cart Item ID: {}", cartItem.getId());
             return ResponseEntity.ok(ApiResponse.success("Item added to cart", cartItem));
         } catch (Exception e) {
-            System.err.println("❌ CartController: Error adding to cart - " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error adding to cart via API - User ID: {}, Book ID: {} - Error: {}", 
+                        userId, bookId, e.getMessage(), e);
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }
@@ -39,14 +43,15 @@ public class CartController {
     public ResponseEntity<ApiResponse<String>> removeFromCart(
             @RequestParam Long userId,
             @RequestParam Long bookId) {
+        logger.info("DELETE /api/cart/remove - User ID: {}, Book ID: {}", userId, bookId);
+        
         try {
-            System.out.println("🗑️ CartController: Removing from cart - userId: " + userId + ", bookId: " + bookId);
             cartService.removeFromCart(userId, bookId);
-            System.out.println("✅ CartController: Item removed successfully");
+            logger.info("Item removed from cart successfully via API - User ID: {}, Book ID: {}", userId, bookId);
             return ResponseEntity.ok(ApiResponse.success("Item removed from cart"));
         } catch (Exception e) {
-            System.err.println("❌ CartController: Error removing from cart - " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error removing from cart via API - User ID: {}, Book ID: {} - Error: {}", 
+                        userId, bookId, e.getMessage(), e);
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }
@@ -56,64 +61,68 @@ public class CartController {
             @RequestParam Long userId,
             @RequestParam Long bookId,
             @RequestParam int quantity) {
+        logger.info("PUT /api/cart/update-quantity - User ID: {}, Book ID: {}, Quantity: {}", userId, bookId, quantity);
+        
         try {
-            System.out.println("🔄 CartController: Updating quantity - userId: " + userId + ", bookId: " + bookId + ", quantity: " + quantity);
             CartItem cartItem = cartService.updateQuantity(userId, bookId, quantity);
-            System.out.println("✅ CartController: Quantity updated successfully");
+            logger.info("Cart quantity updated successfully via API");
             return ResponseEntity.ok(ApiResponse.success("Quantity updated", cartItem));
         } catch (Exception e) {
-            System.err.println("❌ CartController: Error updating quantity - " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error updating cart quantity via API - User ID: {}, Book ID: {} - Error: {}", 
+                        userId, bookId, e.getMessage(), e);
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }
 
     @GetMapping("/{userId}")
     public ResponseEntity<ApiResponse<List<CartItem>>> getCartItems(@PathVariable Long userId) {
+        logger.info("GET /api/cart/{} - Fetching cart items", userId);
+        
         try {
-            System.out.println("📋 CartController: Getting cart items for userId: " + userId);
             List<CartItem> cartItems = cartService.getCartItems(userId);
-            System.out.println("✅ CartController: Found " + cartItems.size() + " cart items");
+            logger.info("Retrieved {} cart items via API for user ID: {}", cartItems.size(), userId);
 
-            // Log each cart item for debugging
-            for (CartItem item : cartItems) {
-                System.out.println("  - CartItem ID: " + item.getId() +
-                        ", Book: " + (item.getBook() != null ? item.getBook().getTitle() : "null") +
-                        ", Quantity: " + item.getQuantity());
+            // Debug log for cart items
+            if (logger.isDebugEnabled()) {
+                for (CartItem item : cartItems) {
+                    logger.debug("Cart Item - ID: {}, Book: {}, Quantity: {}", 
+                                item.getId(), 
+                                item.getBook() != null ? item.getBook().getTitle() : "null", 
+                                item.getQuantity());
+                }
             }
 
             return ResponseEntity.ok(ApiResponse.success("Cart items retrieved", cartItems));
         } catch (Exception e) {
-            System.err.println("❌ CartController: Error getting cart items - " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error fetching cart items via API - User ID: {} - Error: {}", userId, e.getMessage(), e);
             return ResponseEntity.status(500).body(ApiResponse.error("Failed to retrieve cart items: " + e.getMessage()));
         }
     }
 
     @GetMapping("/{userId}/total")
     public ResponseEntity<ApiResponse<BigDecimal>> getCartTotal(@PathVariable Long userId) {
+        logger.info("GET /api/cart/{}/total - Calculating cart total", userId);
+        
         try {
-            System.out.println("💰 CartController: Getting cart total for userId: " + userId);
             BigDecimal total = cartService.getCartTotal(userId);
-            System.out.println("✅ CartController: Cart total calculated: " + total);
+            logger.info("Cart total calculated via API - User ID: {}, Total: {}", userId, total);
             return ResponseEntity.ok(ApiResponse.success("Cart total calculated", total));
         } catch (Exception e) {
-            System.err.println("❌ CartController: Error calculating cart total - " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error calculating cart total via API - User ID: {} - Error: {}", userId, e.getMessage(), e);
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }
 
     @DeleteMapping("/{userId}/clear")
     public ResponseEntity<ApiResponse<String>> clearCart(@PathVariable Long userId) {
+        logger.info("DELETE /api/cart/{}/clear - Clearing cart", userId);
+        
         try {
-            System.out.println("🧹 CartController: Clearing cart for userId: " + userId);
             cartService.clearCart(userId);
-            System.out.println("✅ CartController: Cart cleared successfully");
+            logger.info("Cart cleared successfully via API - User ID: {}", userId);
             return ResponseEntity.ok(ApiResponse.success("Cart cleared successfully"));
         } catch (Exception e) {
-            System.err.println("❌ CartController: Error clearing cart - " + e.getMessage());
-            e.printStackTrace();
+            logger.error("Error clearing cart via API - User ID: {} - Error: {}", userId, e.getMessage(), e);
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         }
     }

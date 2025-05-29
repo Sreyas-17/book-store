@@ -6,8 +6,8 @@ import com.bookstore.bookstore_app.entity.User;
 import com.bookstore.bookstore_app.repository.UserRepository;
 import com.bookstore.bookstore_app.config.JwtUtil;
 import com.bookstore.bookstore_app.exception.BusinessException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 public class UserService {
     
-    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+    private static final Logger logger = LogManager.getLogger(UserService.class);
     
     @Autowired
     private UserRepository userRepository;
@@ -31,7 +31,6 @@ public class UserService {
         logger.info("Attempting to register user with email: {}", request.getEmail());
         
         try {
-            // Check if user already exists
             if (userRepository.existsByEmail(request.getEmail())) {
                 logger.warn("Registration failed - Email already exists: {}", request.getEmail());
                 throw new BusinessException("Email already exists");
@@ -50,7 +49,7 @@ public class UserService {
             return "User registered successfully";
             
         } catch (BusinessException ex) {
-            throw ex; // Re-throw business exceptions
+            throw ex;
         } catch (Exception ex) {
             logger.error("Unexpected error during user registration for email: {}", request.getEmail(), ex);
             throw new RuntimeException("Registration failed due to server error");
@@ -144,7 +143,6 @@ public class UserService {
                         return new BusinessException("User not found");
                     });
             
-            // Generate temporary password
             String tempPassword = "temp123456";
             user.setPassword(passwordEncoder.encode(tempPassword));
             userRepository.save(user);

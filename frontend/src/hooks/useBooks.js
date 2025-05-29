@@ -23,6 +23,7 @@ export const useBooks = () => {
     }
   };
 
+  // General search that searches both title and author
   const searchBooks = async (term) => {
     if (!term.trim()) {
       fetchBooks();
@@ -30,15 +31,43 @@ export const useBooks = () => {
     }
     
     try {
-      const response = await bookService.searchBooks(term);
-      if (response.success) {
-        setBooks(response.data);
+      // Search both title and author, then combine results
+      const [titleResponse, authorResponse] = await Promise.all([
+        bookService.searchBooksByTitle(term),
+        bookService.searchBooksByAuthor(term)
+      ]);
+      
+      let allBooks = [];
+      
+      if (titleResponse.success) {
+        allBooks = [...allBooks, ...titleResponse.data];
       }
+      
+      if (authorResponse.success) {
+        allBooks = [...allBooks, ...authorResponse.data];
+      }
+      
+      // Remove duplicates based on book ID
+      const uniqueBooks = allBooks.filter((book, index, self) => 
+        index === self.findIndex(b => b.id === book.id)
+      );
+      
+      setBooks(uniqueBooks);
     } catch (error) {
       console.error('Error searching books:', error);
+      // Fallback to your original method if the new endpoints don't exist yet
+      try {
+        const response = await bookService.searchBooks(term);
+        if (response.success) {
+          setBooks(response.data);
+        }
+      } catch (fallbackError) {
+        console.error('Fallback search also failed:', fallbackError);
+      }
     }
   };
 
+  // Specific author search
   const searchByAuthor = async (term) => {
     if (!term.trim()) {
       fetchBooks();
@@ -46,16 +75,29 @@ export const useBooks = () => {
     }
     
     try {
-      const response = await bookService.searchBooks(term);
+      const response = await bookService.searchBooksByAuthor(term);
       if (response.success) {
-        // Filter books by author
-        const authorBooks = response.data.filter(book => 
-          book.author.toLowerCase().includes(term.toLowerCase())
-        );
-        setBooks(authorBooks);
+        setBooks(response.data);
       }
     } catch (error) {
       console.error('Error searching books by author:', error);
+    }
+  };
+
+  // Optional: Add a specific title search function
+  const searchByTitle = async (term) => {
+    if (!term.trim()) {
+      fetchBooks();
+      return;
+    }
+    
+    try {
+      const response = await bookService.searchBooksByTitle(term);
+      if (response.success) {
+        setBooks(response.data);
+      }
+    } catch (error) {
+      console.error('Error searching books by title:', error);
     }
   };
 
@@ -75,7 +117,7 @@ export const useBooks = () => {
       return response;
     } catch (error) {
       console.error('Error rating book:', error);
-      return { success: false, message: 'Failed to rate book' };
+      return { success: false, message: 'Failed torate book' };
     }
   };
 
@@ -84,8 +126,9 @@ export const useBooks = () => {
     searchTerm,
     setSearchTerm,
     fetchBooks,
-    searchBooks,
-    searchByAuthor,
+    searchBooks,      // Searches both title and author
+    searchByAuthor,   // Searches only by author
+    searchByTitle,    // Searches only by title (optional)
     rateBook
   };
 };

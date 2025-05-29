@@ -1,8 +1,8 @@
 package com.bookstore.bookstore_app.exception;
 
 import com.bookstore.bookstore_app.dto.ApiResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -23,7 +23,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+    private static final Logger logger = LogManager.getLogger(GlobalExceptionHandler.class);
 
     // Handle validation errors
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -40,6 +40,7 @@ public class GlobalExceptionHandler {
             logger.debug("Validation error - Field: {}, Message: {}", fieldName, errorMessage);
         });
 
+        logger.info("Returning validation error response with {} field errors", errors.size());
         return ResponseEntity.badRequest()
                 .body(ApiResponse.error("Validation failed", errors));
     }
@@ -87,6 +88,7 @@ public class GlobalExceptionHandler {
         String message = "Data integrity error";
         if (ex.getMessage().contains("Duplicate entry")) {
             message = "This record already exists";
+            logger.info("Duplicate entry detected, returning user-friendly message");
         }
         
         return ResponseEntity.badRequest()

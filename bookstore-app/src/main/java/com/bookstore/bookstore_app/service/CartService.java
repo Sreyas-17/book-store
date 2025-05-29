@@ -7,8 +7,8 @@ import com.bookstore.bookstore_app.repository.CartItemRepository;
 import com.bookstore.bookstore_app.repository.BookRepository;
 import com.bookstore.bookstore_app.repository.UserRepository;
 import com.bookstore.bookstore_app.exception.BusinessException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +19,7 @@ import java.util.Optional;
 @Service
 public class CartService {
     
-    private static final Logger logger = LoggerFactory.getLogger(CartService.class);
+    private static final Logger logger = LogManager.getLogger(CartService.class);
     
     @Autowired
     private CartItemRepository cartItemRepository;
@@ -46,7 +46,6 @@ public class CartService {
                         return new BusinessException("Book not found");
                     });
             
-            // Check stock availability
             if (book.getStockQuantity() < quantity) {
                 logger.warn("Add to cart failed - Insufficient stock. Available: {}, Requested: {}", 
                           book.getStockQuantity(), quantity);
@@ -60,7 +59,6 @@ public class CartService {
                 cartItem = existingItem.get();
                 int newQuantity = cartItem.getQuantity() + quantity;
                 
-                // Check total quantity against stock
                 if (book.getStockQuantity() < newQuantity) {
                     logger.warn("Add to cart failed - Total quantity {} exceeds stock {}", 
                               newQuantity, book.getStockQuantity());
@@ -125,7 +123,6 @@ public class CartService {
                         return new BusinessException("Cart item not found");
                     });
             
-            // Check stock availability
             if (cartItem.getBook().getStockQuantity() < quantity) {
                 logger.warn("Update quantity failed - Insufficient stock. Available: {}, Requested: {}", 
                           cartItem.getBook().getStockQuantity(), quantity);
