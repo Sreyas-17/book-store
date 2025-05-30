@@ -1,4 +1,3 @@
-// src/contexts/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { authService } from '../services/authService';
 
@@ -14,120 +13,168 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('token'));
   const [loading, setLoading] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  // Initialize auth on app start
+  // Initialize auth on app start - FIXED: Removed function dependencies
   useEffect(() => {
     const initializeAuth = async () => {
-      if (token) {
-        console.log('Token found, fetching user profile...');
-        const userData = await fetchUserProfile();
-        if (!userData) {
-          handleLogout();
+      try {
+        console.log('Initializing auth...');
+
+        if (authService.isLoggedIn()) {
+          console.log('Found existing login, loading user data...');
+          const userData = authService.getCurrentUser();
+
+          if (userData) {
+            console.log('User data loaded from localStorage:', userData);
+            setUser(userData);
+          } else {
+            console.log('No user data in localStorage, trying to fetch profile...');
+            const profileResult = await authService.getProfile();
+            if (profileResult.success) {
+              console.log('Profile fetched from API:', profileResult.data);
+              setUser(profileResult.data);
+            } else {
+              console.log('Failed to fetch profile, clearing auth...');
+              authService.logout();
+            }
+          }
+        } else {
+          console.log('No existing login found');
         }
+      } catch (error) {
+        console.error('Auth initialization error:', error);
+        authService.logout();
+      } finally {
+        setIsInitialized(true);
+        console.log('Auth initialization complete');
       }
-      setIsInitialized(true);
     };
 
     initializeAuth();
-  }, []);
-
-  const fetchUserProfile = async () => {
-    if (!token) return null;
-
-    try {
-      const response = await authService.getProfile();
-      if (response.success && response.data) {
-        setUser(response.data);
-        console.log('User profile fetched:', response.data.email);
-        return response.data;
-      }
-      return null;
-    } catch (error) {
-      console.error('Error fetching user profile:', error);
-      return null;
-    }
-  };
+  }, []); // FIXED: Empty dependency array
 
   const handleLogin = async (email, password) => {
     setLoading(true);
     try {
-      console.log('Attempting login for:', email);
+      console.log('AuthContext: Attempting login for:', email);
       const response = await authService.login(email, password);
-      
-      if (response.success && response.data) {
-        const newToken = response.data;
-        console.log('Login successful, setting token...');
-        
-        // Set token first
-        setToken(newToken);
-        localStorage.setItem('token', newToken);
-        
-        // Fetch user profile with new token
-        const userResponse = await authService.getProfile();
-        console.log('Profile response after login:', userResponse);
-        
-        if (userResponse.success && userResponse.data) {
-          setUser(userResponse.data);
-          console.log('User set successfully:', userResponse.data.email);
-          
-          // Return success with navigation flag
-          return { 
-            success: true, 
-            shouldNavigateHome: true 
-          };
-        } else {
-          console.error('Failed to fetch user profile after login');
-          return { success: false, message: 'Failed to load user profile' };
-        }
+      console.log('AuthContext: Login service response:', response);
+
+      if (response.success && response.user) {
+        console.log('AuthContext: Login successful, user data:', response.user);
+        setUser(response.user);
+
+        return {
+          success: true,
+          user: response.user,
+          shouldNavigateHome: true
+        };
       } else {
-        console.log('Login failed:', response.message);
-        return response;
+        console.log('AuthContext: Login failed:', response.message);
+        return {
+          success: false,
+          message: response.message || 'Login failed. Please check your credentials.'
+        };
       }
     } catch (error) {
-      console.error('Login error:', error);
-      return { success: false, message: 'Network error occurred' };
+      console.error('AuthContext: Login error:', error);
+      return {
+        success: false,
+        message: 'Network error occurred. Please try again.'
+      };
     } finally {
       setLoading(false);
     }
   };
 
-  const handleRegister = async (userData) => {
+  const handleRegister = async (userData, role = 'USER') => {
     setLoading(true);
     try {
-      const response = await authService.register(userData);
-      console.log('Register response:', response);
+      console.log('AuthContext: Attempting registration for:', userData.email, 'as', role);
+
+      let response;
+      switch (role) {
+        case 'VENDOR':
+          response = await authService.registerVendor(userData);
+          break;
+        case 'ADMIN':
+          response = await authService.registerAdmin(userData);
+          break;
+        default:
+          response = await authService.register(userData);
+      }
+
+      console.log('AuthContext: Register response:', response);
       return response;
     } catch (error) {
-      console.error('Register error:', error);
-      return { success: false, message: 'Network error occurred' };
+      console.error('AuthContext: Register error:', error);
+      return { success: false, message: 'Registration failed. Please try again.' };
     } finally {
       setLoading(false);
     }
   };
 
   const handleLogout = () => {
-    console.log('Logging out user...');
-    setToken(null);
+    console.log('AuthContext: Logging out user...');
     setUser(null);
-    localStorage.removeItem('token');
     authService.logout();
-    
-    // Return logout success with navigation flag
     return { success: true, shouldNavigateLogin: true };
   };
 
+  const updateUser = (userData) => {
+    console.log('AuthContext: Updating user data:', userData);
+    setUser(userData);
+    localStorage.setItem('user', JSON.stringify(userData));
+  };
+
+  // Helper functions - FIXED: Use user state directly
+  const isAuthenticated = () => {
+    return !!user && authService.isLoggedIn();
+  };
+
+  const hasRole = (role) => {
+    return user && user.role === role;
+  };
+
+  const isAdmin = () => hasRole('ADMIN');
+  const isVendor = () => hasRole('VENDOR');
+  const isUser = () => hasRole('USER');
+
+  // Get user display name
+  const getUserDisplayName = () => {
+    if (!user) return 'Guest';
+    if (user.role === 'VENDOR' && user.businessName) {
+      return user.businessName;
+    }
+    return `${user.firstName} ${user.lastName}`;
+  };
+
   const value = {
+    // State
     user,
-    token,
     loading,
     isInitialized,
+
+    // Actions
     handleLogin,
     handleRegister,
     handleLogout,
-    fetchUserProfile
+    updateUser,
+
+    // Cleaner names
+    login: handleLogin,
+    register: handleRegister,
+    logout: handleLogout,
+
+    // Helpers
+    isAuthenticated,
+    hasRole,
+    isAdmin,
+    isVendor,
+    isUser,
+    getUserDisplayName
   };
 
   return (

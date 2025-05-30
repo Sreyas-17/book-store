@@ -35,7 +35,7 @@ public class Book {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vendor_id")
-    @JsonIgnore  // Ignore vendor to prevent recursion
+    @JsonIgnore // Ignore vendor to prevent recursion
     private Vendor vendor;
 
     private boolean isApproved = false;
@@ -49,17 +49,22 @@ public class Book {
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
-    @JsonIgnore  // Ignore reviews to prevent recursion
+    @JsonIgnore // Ignore reviews to prevent recursion
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
-    @JsonIgnore  // Ignore cart items to prevent recursion
+    @JsonIgnore // Ignore cart items to prevent recursion
     private List<CartItem> cartItems;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     private String imageUrl;
 
     // Constructors
-    public Book() {}
+    public Book() {
+    }
 
     public Book(String title, String author, String isbn, BigDecimal price) {
         this.title = title;
@@ -69,48 +74,131 @@ public class Book {
     }
 
     // Getters and Setters (same as before)
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getIsbn() { return isbn; }
-    public void setIsbn(String isbn) { this.isbn = isbn; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public String getAuthor() {
+        return author;
+    }
 
-    public BigDecimal getPrice() { return price; }
-    public void setPrice(BigDecimal price) { this.price = price; }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-    public int getStockQuantity() { return stockQuantity; }
-    public void setStockQuantity(int stockQuantity) { this.stockQuantity = stockQuantity; }
+    public String getIsbn() {
+        return isbn;
+    }
 
-    public Vendor getVendor() { return vendor; }
-    public void setVendor(Vendor vendor) { this.vendor = vendor; }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
-    public boolean isApproved() { return isApproved; }
-    public void setApproved(boolean approved) { isApproved = approved; }
+    public String getDescription() {
+        return description;
+    }
 
-    public BigDecimal getRatingAvg() { return ratingAvg; }
-    public void setRatingAvg(BigDecimal ratingAvg) { this.ratingAvg = ratingAvg; }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    public int getTotalRatings() { return totalRatings; }
-    public void setTotalRatings(int totalRatings) { this.totalRatings = totalRatings; }
+    public BigDecimal getPrice() {
+        return price;
+    }
 
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public Category getCategory() {
+        return category;
+    }
 
-    public List<Review> getReviews() { return reviews; }
-    public void setReviews(List<Review> reviews) { this.reviews = reviews; }
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
-    public List<CartItem> getCartItems() { return cartItems; }
-    public void setCartItems(List<CartItem> cartItems) { this.cartItems = cartItems; }
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 
-    public String getImageUrl() { return imageUrl; }
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public int getStockQuantity() {
+        return stockQuantity;
+    }
+
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
+    }
+
+    public Vendor getVendor() {
+        return vendor;
+    }
+
+    public void setVendor(Vendor vendor) {
+        this.vendor = vendor;
+    }
+
+    public boolean isApproved() {
+        return isApproved;
+    }
+
+    public void setApproved(boolean approved) {
+        isApproved = approved;
+    }
+
+    public BigDecimal getRatingAvg() {
+        return ratingAvg;
+    }
+
+    public void setRatingAvg(BigDecimal ratingAvg) {
+        this.ratingAvg = ratingAvg;
+    }
+
+    public int getTotalRatings() {
+        return totalRatings;
+    }
+
+    public void setTotalRatings(int totalRatings) {
+        this.totalRatings = totalRatings;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
+
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

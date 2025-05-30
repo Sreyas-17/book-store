@@ -255,4 +255,16 @@ public class BookService {
             throw new RuntimeException("Failed to rate book: " + e.getMessage(), e);
         }
     }
+
+    public List<Book> getBooksByCategory(Long categoryId) {
+        logger.info("Fetching books for category ID: {}", categoryId);
+        try {
+            List<Book> books = bookRepository.findByCategoryId(categoryId);
+            logger.info("Found {} books for category ID: {}", books.size(), categoryId);
+            return books;
+        } catch (Exception e) {
+            logger.error("Failed to fetch books by category ID: {} - Error: {}", categoryId, e.getMessage(), e);
+            throw e;
+        }
+    }
 }

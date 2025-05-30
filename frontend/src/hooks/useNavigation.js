@@ -4,9 +4,9 @@ export const useNavigation = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
   const navigateTo = (page) => {
-    setCurrentPage(page);
+        console.log('navigateTo called with page:', page);
+        setCurrentPage(page);
   };
-
   const goToLogin = () => setCurrentPage('login');
   const goToRegister = () => setCurrentPage('register');
   const goToHome = () => setCurrentPage('home');
@@ -15,6 +15,7 @@ export const useNavigation = () => {
   const goToCheckout = () => setCurrentPage('checkout');
   const goToOrders = () => setCurrentPage('orders');
   const goToProfile = () => setCurrentPage('profile');
+
 
   return {
     currentPage,

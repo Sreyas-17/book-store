@@ -1,23 +1,29 @@
-// src/contexts/AppContext.js
 import React from 'react';
 import { AuthProvider } from './AuthContext';
 import { CartProvider } from './CartContext';
 import { WishlistProvider } from './WishlistContext';
+import { VendorProvider } from './VendorContext';
+import { AdminProvider } from './AdminContext';
 
-// Combined provider that wraps all contexts
 export const AppProvider = ({ children }) => {
   return (
     <AuthProvider>
-      <CartProvider>
-        <WishlistProvider>
-          {children}
-        </WishlistProvider>
-      </CartProvider>
+      <VendorProvider>
+        <AdminProvider>
+          <CartProvider>
+            <WishlistProvider>
+              {children}
+            </WishlistProvider>
+          </CartProvider>
+        </AdminProvider>
+      </VendorProvider>
     </AuthProvider>
   );
 };
 
-// Export all contexts for easy importing
+// Export all contexts
 export { useAuth } from './AuthContext';
 export { useCart } from './CartContext';
 export { useWishlist } from './WishlistContext';
+export { useVendor } from './VendorContext';
+export { useAdmin } from './AdminContext';

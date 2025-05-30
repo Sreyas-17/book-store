@@ -1,146 +1,18 @@
-2025-05-29 11:17:17.845 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
-2025-05-29 11:17:17.991 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.UserService - Fetching user by email: john@example.com
-2025-05-29 11:17:18.045 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.UserService - User found with email: john@example.com and ID: 1
-2025-05-29 11:17:18.059 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
-2025-05-29 11:17:18.139 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
-2025-05-29 11:17:18.143 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.UserService - Fetching user by email: john@example.com
-2025-05-29 11:17:18.150 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
-2025-05-29 11:17:18.150 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.UserService - User found with email: john@example.com and ID: 1
-2025-05-29 11:17:18.268 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 1
-2025-05-29 11:17:18.268 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
-2025-05-29 11:17:18.269 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 1
-2025-05-29 11:17:18.269 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:17:18.294 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.CartService - Found 1 cart items for User ID: 1
-2025-05-29 11:17:18.296 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.OrderService - Found 7 orders for user ID: 1
-2025-05-29 11:17:18.304 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.AddressService - Found 2 addresses for user ID: 1
-2025-05-29 11:17:18.307 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 1 items in wishlist for user ID: 1
-2025-05-29 11:17:20.709 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.CartService - Adding item to cart - User ID: 1, Book ID: 1, Quantity: 1
-2025-05-29 11:17:20.733 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.CartService - Created new cart item
-2025-05-29 11:17:20.823 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.CartService - Item added to cart successfully - Cart Item ID: 28
-2025-05-29 11:17:20.833 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:17:20.836 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.CartService - Found 2 cart items for User ID: 1
-2025-05-29 11:17:22.375 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.CartService - Updating cart quantity - User ID: 1, Book ID: 1, New Quantity: 2
-2025-05-29 11:17:22.410 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.CartService - Cart quantity updated successfully - Cart Item ID: 28, New Quantity: 2
-2025-05-29 11:17:22.419 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:17:22.427 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.CartService - Found 2 cart items for User ID: 1
-2025-05-29 11:17:22.559 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.CartService - Updating cart quantity - User ID: 1, Book ID: 1, New Quantity: 3
-2025-05-29 11:17:22.574 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.CartService - Cart quantity updated successfully - Cart Item ID: 28, New Quantity: 3
-2025-05-29 11:17:22.583 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:17:22.589 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Found 2 cart items for User ID: 1
-2025-05-29 11:17:22.762 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.CartService - Updating cart quantity - User ID: 1, Book ID: 1, New Quantity: 4
-2025-05-29 11:17:22.779 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.CartService - Cart quantity updated successfully - Cart Item ID: 28, New Quantity: 4
-2025-05-29 11:17:22.788 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:17:22.792 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.CartService - Found 2 cart items for User ID: 1
-2025-05-29 11:17:30.107 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.CartService - Updating cart quantity - User ID: 1, Book ID: 2, New Quantity: 3
-2025-05-29 11:17:30.123 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.CartService - Cart quantity updated successfully - Cart Item ID: 26, New Quantity: 3
-2025-05-29 11:17:30.134 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:17:30.139 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.CartService - Found 2 cart items for User ID: 1
-2025-05-29 11:17:35.584 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: g
-2025-05-29 11:17:35.584 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: g
-2025-05-29 11:17:35.601 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 2 books matching title: g
-2025-05-29 11:17:35.601 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: g
-2025-05-29 11:17:35.721 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: gr
-2025-05-29 11:17:35.721 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: gr
-2025-05-29 11:17:35.726 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: gr
-2025-05-29 11:17:35.727 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: gr
-2025-05-29 11:17:35.833 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: gra
-2025-05-29 11:17:35.833 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: gra
-2025-05-29 11:17:35.837 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: gra
-2025-05-29 11:17:35.837 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: gra
-2025-05-29 11:17:36.466 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: gr
-2025-05-29 11:17:36.466 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: gr
-2025-05-29 11:17:36.471 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: gr
-2025-05-29 11:17:36.471 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: gr
-2025-05-29 11:17:36.636 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: gre
-2025-05-29 11:17:36.636 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: gre
-2025-05-29 11:17:36.642 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: gre
-2025-05-29 11:17:36.642 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: gre
-2025-05-29 11:17:37.345 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: gr
-2025-05-29 11:17:37.345 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: gr
-2025-05-29 11:17:37.350 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: gr
-2025-05-29 11:17:37.351 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: gr
-2025-05-29 11:17:37.484 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: g
-2025-05-29 11:17:37.484 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: g
-2025-05-29 11:17:37.489 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 2 books matching title: g
-2025-05-29 11:17:37.489 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: g
-2025-05-29 11:17:37.610 [http-nio-8080-exec-8] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
-2025-05-29 11:17:37.617 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
-2025-05-29 11:17:40.162 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: s
-2025-05-29 11:17:40.162 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: s
-2025-05-29 11:17:40.168 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: s
-2025-05-29 11:17:40.168 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: s
-2025-05-29 11:17:40.378 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sc
-2025-05-29 11:17:40.378 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sc
-2025-05-29 11:17:40.382 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sc
-2025-05-29 11:17:40.382 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sc
-2025-05-29 11:17:40.617 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sco
-2025-05-29 11:17:40.617 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sco
-2025-05-29 11:17:40.621 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sco
-2025-05-29 11:17:40.622 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sco
-2025-05-29 11:17:41.426 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: scot
-2025-05-29 11:17:41.426 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: scot
-2025-05-29 11:17:41.432 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: scot
-2025-05-29 11:17:41.432 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: scot
-2025-05-29 11:17:41.563 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: scott
-2025-05-29 11:17:41.564 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: scott
-2025-05-29 11:17:41.568 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: scott
-2025-05-29 11:17:41.568 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: scott
-2025-05-29 11:17:44.393 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
-2025-05-29 11:17:44.402 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
-2025-05-29 11:17:52.552 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: s
-2025-05-29 11:17:52.552 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: s
-2025-05-29 11:17:52.558 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: s
-2025-05-29 11:17:52.558 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: s
-2025-05-29 11:17:52.741 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sc
-2025-05-29 11:17:52.741 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sc
-2025-05-29 11:17:52.745 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sc
-2025-05-29 11:17:52.745 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sc
-2025-05-29 11:17:53.043 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sco
-2025-05-29 11:17:53.043 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sco
-2025-05-29 11:17:53.048 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sco
-2025-05-29 11:17:53.048 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sco
-2025-05-29 11:17:53.200 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: scoo
-2025-05-29 11:17:53.200 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: scoo
-2025-05-29 11:17:53.205 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: scoo
-2025-05-29 11:17:53.207 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: scoo
-2025-05-29 11:17:53.547 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sco
-2025-05-29 11:17:53.547 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sco
-2025-05-29 11:17:53.551 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sco
-2025-05-29 11:17:53.553 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sco
-2025-05-29 11:17:53.775 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: scot
-2025-05-29 11:17:53.775 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: scot
-2025-05-29 11:17:53.783 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: scot
-2025-05-29 11:17:53.785 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: scot
-2025-05-29 11:17:56.274 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sco
-2025-05-29 11:17:56.274 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sco
-2025-05-29 11:17:56.280 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sco
-2025-05-29 11:17:56.281 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sco
-2025-05-29 11:17:56.777 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: sc
-2025-05-29 11:17:56.777 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: sc
-2025-05-29 11:17:56.782 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: sc
-2025-05-29 11:17:56.783 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: sc
-2025-05-29 11:17:56.808 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: s
-2025-05-29 11:17:56.808 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: s
-2025-05-29 11:17:56.814 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books matching title: s
-2025-05-29 11:17:56.814 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Found 1 books by author: s
-2025-05-29 11:17:56.858 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
-2025-05-29 11:17:56.866 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 2 books from database
-2025-05-29 11:18:09.663 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.OrderService - Creating order for user ID: 1 with address ID: 3
-2025-05-29 11:18:09.673 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:18:09.679 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.CartService - Found 2 cart items for User ID: 1
-2025-05-29 11:18:09.680 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.CartService - Calculating cart total for User ID: 1
-2025-05-29 11:18:09.693 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.CartService - Cart total calculated for User ID: 1 - Total: 102.93
-2025-05-29 11:18:09.694 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.OrderService - Order details - Number: ORD-3FD9BBA4, Total: 102.93, Items: 2
-2025-05-29 11:18:09.705 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.CartService - Clearing cart for User ID: 1
-2025-05-29 11:18:09.746 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.CartService - Cart cleared successfully for User ID: 1
-2025-05-29 11:18:09.748 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.OrderService - Order created successfully - Order ID: 11, Number: ORD-3FD9BBA4, Total: 102.93
-2025-05-29 11:18:09.769 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
-2025-05-29 11:18:09.780 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.OrderService - Found 8 orders for user ID: 1
-2025-05-29 11:18:09.824 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
-2025-05-29 11:18:09.828 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
-2025-05-29 14:57:59.828 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching book by ID: 1
-2025-05-29 14:57:59.829 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Found book: Test Book by null
-2025-05-29 15:04:19.588 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching book by ID: 1
-2025-05-29 15:04:19.592 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Found book: Test Book by null
-2025-05-29 15:08:10.957 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching book by ID: 1
-2025-05-29 15:08:10.959 [main] DEBUG com.bookstore.bookstore_app.service.BookService - Found book: Test Book by null
+2025-05-30 13:01:14.656 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-30 13:01:14.773 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-30 13:01:14.855 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-30 13:01:14.861 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-30 13:02:01.194 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: Arnav@gmail.com
+2025-05-30 13:02:01.390 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 9 and email: Arnav@gmail.com
+2025-05-30 13:02:16.284 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: Arnav@gmail.com
+2025-05-30 13:02:16.393 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for Arnav@gmail.com with role: USER
+2025-05-30 13:02:16.844 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-30 13:02:16.852 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-30 13:02:16.862 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-30 13:02:16.869 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-30 13:02:41.926 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: arnav@gmail.com
+2025-05-30 13:02:41.998 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for Arnav@gmail.com with role: USER
+2025-05-30 13:02:42.108 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-30 13:02:42.115 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-30 13:02:42.124 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-30 13:02:42.131 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database

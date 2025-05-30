@@ -1,0 +1,700 @@
+/* src/components/AdminDashboard.css */
+
+/* Admin Dashboard Layout */
+.admin-dashboard {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.admin-page-header {
+  padding: 32px 0 24px;
+}
+
+.admin-page-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.admin-page-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Admin Tabs */
+.admin-tabs {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 32px;
+}
+
+.admin-tabs-container {
+  display: flex;
+  gap: 0;
+}
+
+.admin-tab-button {
+  padding: 12px 24px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.admin-tab-button:hover {
+  color: #2563eb;
+  background-color: #f8fafc;
+}
+
+.admin-tab-button.active {
+  color: #2563eb;
+  font-weight: 600;
+  border-bottom-color: #2563eb;
+}
+
+.admin-tab-badge {
+  background: #dc2626;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Admin Overview */
+.admin-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.admin-overview-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.admin-overview-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.admin-overview-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Admin Stats Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.admin-stat-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.admin-stat-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.admin-stat-card.clickable {
+  cursor: pointer;
+}
+
+.admin-stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-stat-info {
+  flex: 1;
+}
+
+.admin-stat-title {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.admin-stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.admin-stat-subtitle {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.admin-stat-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.admin-stat-trend.positive {
+  color: #059669;
+}
+
+.admin-stat-trend.negative {
+  color: #dc2626;
+}
+
+.admin-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Admin Quick Stats */
+.admin-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.admin-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.admin-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pending Approvals */
+.admin-pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-pending-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f8fafc;
+}
+
+.admin-pending-item.books {
+  border-left: 4px solid #2563eb;
+}
+
+.admin-pending-item.vendors {
+  border-left: 4px solid #7c3aed;
+}
+
+.admin-pending-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.admin-pending-badge {
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.admin-pending-badge.books {
+  background: #2563eb;
+}
+
+.admin-pending-badge.vendors {
+  background: #7c3aed;
+}
+
+.admin-pending-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Revenue Overview */
+.admin-revenue-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-revenue-amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 4px;
+}
+
+.admin-revenue-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.admin-revenue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.admin-revenue-metric {
+  text-align: center;
+}
+
+.admin-revenue-metric-value {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.admin-revenue-metric-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Recent Activity */
+.admin-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.admin-activity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.admin-activity-dot.green {
+  background-color: #059669;
+}
+
+.admin-activity-dot.yellow {
+  background-color: #d97706;
+}
+
+.admin-activity-dot.blue {
+  background-color: #2563eb;
+}
+
+/* Admin Section Layout */
+.admin-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.admin-section-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Search and Filter */
+.admin-search-filter {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-search-container {
+  flex: 1;
+  position: relative;
+}
+
+.admin-search-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.admin-search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.admin-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.admin-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-filter-select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.admin-filter-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Content Lists */
+.admin-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Book Items */
+.admin-book-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.admin-book-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-book-content {
+  display: flex;
+  gap: 16px;
+}
+
+.admin-book-image {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.admin-book-details {
+  flex: 1;
+}
+
+.admin-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.admin-book-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.admin-book-author {
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.admin-book-vendor {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.admin-book-isbn {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.admin-book-price-info {
+  text-align: right;
+}
+
+.admin-book-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 4px;
+}
+
+.admin-book-stock {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.admin-book-description {
+  margin-bottom: 16px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.admin-book-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Vendor Items */
+.admin-vendor-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.admin-vendor-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-vendor-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-vendor-info {
+  flex: 1;
+}
+
+.admin-vendor-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.admin-vendor-email,
+.admin-vendor-phone,
+.admin-vendor-owner,
+.admin-vendor-date {
+  color: #6b7280;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.admin-vendor-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* User Items */
+.admin-user-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.admin-user-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-user-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-user-info {
+  flex: 1;
+}
+
+.admin-user-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.admin-user-email {
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.admin-user-date {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.admin-user-role {
+  margin-left: 16px;
+}
+
+.admin-role-select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  min-width: 120px;
+}
+
+.admin-role-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Coming Soon */
+.admin-coming-soon {
+  text-align: center;
+  padding: 64px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-coming-soon h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.admin-coming-soon p {
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-quick-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-section-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .admin-search-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-book-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-book-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .admin-vendor-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .admin-user-content {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-tabs-container {
+    flex-wrap: wrap;
+  }
+
+  .admin-tab-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .admin-book-actions,
+  .admin-vendor-actions {
+    justify-content: center;
+  }
+}

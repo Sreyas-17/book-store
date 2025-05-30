@@ -1,7 +1,10 @@
+// src/components/RegisterPage.js - Enhanced with vendor registration link
 import React, { useState } from 'react';
-import { Book } from 'lucide-react';
+import { Book, Store } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
-const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
+const RegisterPage = ({ setCurrentPage }) => {
+  const { register, loading } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -16,13 +19,14 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
     e.preventDefault();
     setError(''); // Clear previous errors
     setSuccess(''); // Clear previous success messages
-    
+
     console.log('📝 Submitting registration with data:', formData);
-    
+
     try {
-      const response = await handleRegister(formData);
+      // Register as regular USER (default role)
+      const response = await register(formData, 'USER');
       console.log('📥 Registration response:', response);
-      
+
       if (response && response.success) {
         setSuccess('Registration successful! Please login.');
         setTimeout(() => setCurrentPage('login'), 2000);
@@ -133,8 +137,8 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
             disabled={loading}
             className="btn btn-success"
             style={{
-              width: '100%', 
-              padding: '14px', 
+              width: '100%',
+              padding: '14px',
               fontSize: '16px',
               marginTop: '8px'
             }}
@@ -143,15 +147,51 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
           </button>
         </form>
 
+        {/* Vendor Registration Promotion */}
+        <div style={{
+          backgroundColor: '#f3e8ff',
+          border: '1px solid #d8b4fe',
+          borderRadius: '8px',
+          padding: '16px',
+          marginTop: '20px',
+          textAlign: 'center'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '8px' }}>
+            <Store size={20} style={{ color: '#7c3aed' }} />
+            <span style={{ fontWeight: '600', color: '#7c3aed' }}>Want to sell books?</span>
+          </div>
+          <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '12px' }}>
+            Join as a vendor and start your own bookstore business
+          </p>
+          <button
+            onClick={() => setCurrentPage('vendor-register')}
+            style={{
+              background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+              color: 'white',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: '500',
+              cursor: 'pointer',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.transform = 'translateY(-1px)'}
+            onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
+          >
+            Register as Vendor →
+          </button>
+        </div>
+
         {/* Sign In Link */}
         <div className="auth-link">
           <span style={{color: '#6b7280'}}>Already have an account? </span>
           <button
             onClick={() => setCurrentPage('login')}
             style={{
-              background: 'none', 
-              border: 'none', 
-              color: '#059669', 
+              background: 'none',
+              border: 'none',
+              color: '#059669',
               cursor: 'pointer',
               textDecoration: 'underline',
               fontSize: '14px'

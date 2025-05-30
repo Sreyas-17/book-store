@@ -206,5 +206,21 @@ public class BookController {
             return ResponseEntity.badRequest()
                     .body(ApiResponse.error("Failed to rate book: " + e.getMessage()));
         }
-    }    
+    }
+
+    @GetMapping("/category/{categoryId}")
+    public ResponseEntity<ApiResponse<List<Book>>> getBooksByCategory(@PathVariable Long categoryId) {
+        logger.info("GET /api/books/category/{} - Fetching books by category", categoryId);
+
+        try {
+            List<Book> books = bookService.getBooksByCategory(categoryId);
+            logger.info("Retrieved {} books for category ID: {}", books.size(), categoryId);
+            return ResponseEntity.ok(ApiResponse.success("Books retrieved", books));
+        } catch (Exception e) {
+            logger.error("Error fetching books by category - Category ID: {} - Error: {}", categoryId, e.getMessage(), e);
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        }
+    }
+
+
 }

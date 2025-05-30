@@ -11,9 +11,20 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
+
+    long countByVendorId(Long vendorId);
+    long countByVendorIdAndIsApprovedTrue(Long vendorId);
+    long countByVendorIdAndIsApprovedFalse(Long vendorId);
+
+    long countByIsApprovedTrue();
+    long countByIsApprovedFalse();
+
     List<Book> findByTitleContainingIgnoreCase(String title);
     List<Book> findByAuthorContainingIgnoreCase(String author);
     List<Book> findByIsbn(String isbn);
+    List<Book> findByVendorId(Long vendorId);
+    List<Book> findByVendorIdAndIsApprovedTrue(Long vendorId);
+    List<Book> findByVendorIdAndIsApprovedFalse(Long vendorId);
 
     @Query("SELECT b FROM Book b WHERE b.ratingAvg >= :rating")
     List<Book> findByRatingGreaterThanEqual(@Param("rating") Double rating);
@@ -24,4 +35,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     List<Book> findByIsApprovedTrue();
     List<Book> findByIsApprovedFalse();
+
+    List<Book> findByCategoryId(Long categoryId);
 }

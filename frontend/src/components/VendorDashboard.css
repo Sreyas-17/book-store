@@ -1,0 +1,503 @@
+/* src/components/VendorDashboard.css */
+
+/* Vendor Dashboard Layout */
+.vendor-dashboard {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Vendor Tabs */
+.vendor-tabs {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 32px;
+}
+
+.vendor-tabs-container {
+  display: flex;
+  gap: 0;
+}
+
+.vendor-tab-button {
+  padding: 12px 24px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vendor-tab-button:hover {
+  color: #2563eb;
+  background-color: #f8fafc;
+}
+
+.vendor-tab-button.active {
+  color: #2563eb;
+  font-weight: 600;
+  border-bottom-color: #2563eb;
+}
+
+/* Vendor Overview */
+.vendor-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.vendor-section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+/* Vendor Stats */
+.vendor-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.vendor-stat-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.vendor-stat-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.vendor-stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vendor-stat-info {
+  flex: 1;
+}
+
+.vendor-stat-title {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.vendor-stat-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Vendor Info Grid */
+.vendor-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.vendor-business-info,
+.vendor-revenue-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.vendor-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.vendor-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vendor-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.vendor-info-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.vendor-info-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Revenue Card */
+.vendor-revenue-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.vendor-revenue-amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 4px;
+}
+
+.vendor-revenue-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.vendor-revenue-actions {
+  margin-top: 16px;
+}
+
+.vendor-manage-btn {
+  width: 100%;
+}
+
+/* Books Section */
+.vendor-books-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vendor-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vendor-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Book Form */
+.vendor-book-form {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.vendor-form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.vendor-form-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vendor-form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vendor-form-full {
+  margin-bottom: 16px;
+}
+
+.vendor-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.vendor-form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Books List */
+.vendor-books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vendor-book-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.vendor-book-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vendor-book-content {
+  display: flex;
+  gap: 16px;
+}
+
+.vendor-book-image {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.vendor-book-details {
+  flex: 1;
+}
+
+.vendor-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.vendor-book-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.vendor-book-author {
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.vendor-book-stock {
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.vendor-book-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 16px;
+}
+
+.vendor-book-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.vendor-edit-btn,
+.vendor-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Status Badges */
+.vendor-status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vendor-status-badge.approved {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.vendor-status-badge.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+/* Orders Section */
+.vendor-orders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vendor-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vendor-order-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.vendor-order-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vendor-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.vendor-order-info {
+  flex: 1;
+}
+
+.vendor-order-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.vendor-order-date {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.vendor-order-controls {
+  text-align: right;
+}
+
+.vendor-order-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 8px;
+}
+
+.vendor-status-select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+  color: #374151;
+}
+
+.vendor-status-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Order Items */
+.vendor-order-items {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.vendor-order-items-title {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.vendor-order-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.vendor-order-item-name {
+  color: #374151;
+}
+
+.vendor-order-item-price {
+  color: #059669;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .vendor-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vendor-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-form-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .vendor-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-section-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .vendor-book-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vendor-book-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vendor-order-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .vendor-order-controls {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .vendor-tabs-container {
+    flex-wrap: wrap;
+  }
+
+  .vendor-tab-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .vendor-book-actions {
+    justify-content: center;
+  }
+
+  .vendor-form-actions {
+    flex-direction: column;
+  }
+}

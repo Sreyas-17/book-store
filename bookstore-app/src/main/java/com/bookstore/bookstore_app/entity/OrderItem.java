@@ -13,13 +13,17 @@ public class OrderItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", nullable = false)
-    @JsonIgnore  // Don't include order in order item to prevent recursion
+    @JsonIgnore // Don't include order in order item to prevent recursion
     private Order order;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "book_id", nullable = false)
     // Keep book visible in order items (users need to see what they ordered)
     private Book book;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "vendor_id")
+    private Vendor vendor;
 
     private int quantity;
 
@@ -32,12 +36,27 @@ public class OrderItem {
     // Constructors
     public OrderItem() {}
 
+    // OLD constructor (keep for backward compatibility)
     public OrderItem(Order order, Book book, int quantity, BigDecimal unitPrice) {
         this.order = order;
         this.book = book;
         this.quantity = quantity;
         this.unitPrice = unitPrice;
         this.totalPrice = unitPrice.multiply(BigDecimal.valueOf(quantity));
+        // Auto-set vendor from book if available
+        if (book != null && book.getVendor() != null) {
+            this.vendor = book.getVendor();
+        }
+    }
+
+    // NEW constructor (with vendor)
+    public OrderItem(Order order, Book book, int quantity, BigDecimal unitPrice, Vendor vendor) {
+        this.order = order;
+        this.book = book;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+        this.totalPrice = unitPrice.multiply(BigDecimal.valueOf(quantity));
+        this.vendor = vendor;
     }
 
     // Getters and Setters
@@ -58,4 +77,7 @@ public class OrderItem {
 
     public BigDecimal getTotalPrice() { return totalPrice; }
     public void setTotalPrice(BigDecimal totalPrice) { this.totalPrice = totalPrice; }
+
+    public Vendor getVendor() { return vendor; }
+    public void setVendor(Vendor vendor) { this.vendor = vendor; }
 }
