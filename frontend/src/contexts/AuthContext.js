@@ -1,6 +1,5 @@
-// src/contexts/AuthContext.js
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { authService } from '../services/authService';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { authService } from '../services/authService'; // Keep this as is
 
 const AuthContext = createContext();
 
@@ -18,25 +17,9 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  // Initialize auth on app start
-  useEffect(() => {
-    const initializeAuth = async () => {
-      if (token) {
-        console.log('Token found, fetching user profile...');
-        const userData = await fetchUserProfile();
-        if (!userData) {
-          handleLogout();
-        }
-      }
-      setIsInitialized(true);
-    };
-
-    initializeAuth();
-  }, []);
-
-  const fetchUserProfile = async () => {
+  const fetchUserProfile = useCallback(async () => {
     if (!token) return null;
-
+    
     try {
       const response = await authService.getProfile();
       if (response.success && response.data) {
@@ -47,9 +30,23 @@ export const AuthProvider = ({ children }) => {
       return null;
     } catch (error) {
       console.error('Error fetching user profile:', error);
+      handleLogout();
       return null;
     }
-  };
+  }, [token]);
+
+  // Initialize auth on app start
+  useEffect(() => {
+    const initializeAuth = async () => {
+      if (token) {
+        console.log('Token found, fetching user profile...');
+        await fetchUserProfile();
+      }
+      setIsInitialized(true);
+    };
+
+    initializeAuth();
+  }, [token, fetchUserProfile]);
 
   const handleLogin = async (email, password) => {
     setLoading(true);
@@ -61,7 +58,6 @@ export const AuthProvider = ({ children }) => {
         const newToken = response.data;
         console.log('Login successful, setting token...');
         
-        // Set token first
         setToken(newToken);
         localStorage.setItem('token', newToken);
         
@@ -72,12 +68,7 @@ export const AuthProvider = ({ children }) => {
         if (userResponse.success && userResponse.data) {
           setUser(userResponse.data);
           console.log('User set successfully:', userResponse.data.email);
-          
-          // Return success with navigation flag
-          return { 
-            success: true, 
-            shouldNavigateHome: true 
-          };
+          return { success: true };
         } else {
           console.error('Failed to fetch user profile after login');
           return { success: false, message: 'Failed to load user profile' };
@@ -102,8 +93,6 @@ export const AuthProvider = ({ children }) => {
       return response;
     } catch (error) {
       console.error('Registration error:', error);
-      
-      // Return structured error response
       return {
         success: false,
         message: error.response?.data?.message || error.message || 'Registration failed',
@@ -113,24 +102,21 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   };
-  
 
-  const handleLogout = () => {
+  const handleLogout = useCallback(() => {
     console.log('Logging out user...');
     setToken(null);
     setUser(null);
     localStorage.removeItem('token');
     authService.logout();
-    
-    // Return logout success with navigation flag
-    return { success: true, shouldNavigateLogin: true };
-  };
+  }, []);
 
   const value = {
     user,
     token,
     loading,
     isInitialized,
+    isAuthenticated: !!user && !!token,
     handleLogin,
     handleRegister,
     handleLogout,

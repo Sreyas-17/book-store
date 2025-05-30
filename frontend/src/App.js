@@ -13,6 +13,7 @@ import CheckoutPage from './components/CheckoutPage';
 import OrdersPage from './components/OrdersPage';
 import AdminDashboard from './components/AdminDashboard';
 import VendorDashboard from './components/VendorDashboard';
+import './index.css';
 
 
 // Component to conditionally render header
