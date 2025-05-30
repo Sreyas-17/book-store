@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AppProvider } from './contexts/AppContext';
 import { useAuth } from './contexts/AuthContext';
 import Header from './components/Header';
@@ -13,26 +13,63 @@ import CheckoutPage from './components/CheckoutPage';
 import OrdersPage from './components/OrdersPage';
 import AdminDashboard from './components/AdminDashboard';
 import VendorDashboard from './components/VendorDashboard';
-import './index.css';
+
+
+// Component to conditionally render header
+const ConditionalHeader = () => {
+  const location = useLocation();
+  
+  // Define routes where header should be hidden
+  const hideHeaderRoutes = ['/login', '/register'];
+  
+  // Don't render header on specified routes
+  if (hideHeaderRoutes.includes(location.pathname)) {
+    return null;
+  }
+  
+  return <Header />;
+};
 
 // Protected Route Component
 const ProtectedRoute = ({ children, allowedRoles = [] }) => {
-  const { user, isAuthenticated } = useAuth();
+  const { user, isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner">Loading...</div>
+      </div>
+    );
+  }
   
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
   
   if (allowedRoles.length > 0 && !allowedRoles.includes(user?.role)) {
-    return <Navigate to="/" replace />;
+    return (
+      <div className="access-denied">
+        <h2>Access Denied</h2>
+        <p>You don't have permission to access this page.</p>
+        <Navigate to="/" replace />
+      </div>
+    );
   }
   
   return children;
 };
 
-// Public Route Component (redirect if already logged in)
+// Public Route Component
 const PublicRoute = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner">Loading...</div>
+      </div>
+    );
+  }
   
   if (isAuthenticated) {
     return <Navigate to="/" replace />;
@@ -41,19 +78,20 @@ const PublicRoute = ({ children }) => {
   return children;
 };
 
+// Main App Content Component
 function AppContent() {
-  const { isAuthenticated } = useAuth();
-
   return (
     <div className="App">
       <Router>
-        <Header />
+        {/* Conditional Header - will be hidden on login/register pages */}
+        <ConditionalHeader />
+        
         <main className="main-content">
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<HomePage />} />
             
-            {/* Auth Routes - Only accessible when not logged in */}
+            {/* Auth Routes - Header will be hidden here */}
             <Route 
               path="/login" 
               element={
@@ -71,7 +109,7 @@ function AppContent() {
               } 
             />
             
-            {/* Protected Routes - Only accessible when logged in */}
+            {/* Protected Routes - Header will be visible */}
             <Route 
               path="/profile" 
               element={
@@ -113,7 +151,7 @@ function AppContent() {
               } 
             />
             
-            {/* Admin Routes - Only accessible by ADMIN role */}
+            {/* Admin Routes */}
             <Route 
               path="/admin" 
               element={
@@ -123,7 +161,7 @@ function AppContent() {
               } 
             />
             
-            {/* Vendor Routes - Only accessible by VENDOR role */}
+            {/* Vendor Routes */}
             <Route 
               path="/vendor" 
               element={
@@ -133,7 +171,6 @@ function AppContent() {
               } 
             />
             
-            {/* Catch all route - redirect to home */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
@@ -142,6 +179,7 @@ function AppContent() {
   );
 }
 
+// Main App Component
 function App() {
   return (
     <AppProvider>

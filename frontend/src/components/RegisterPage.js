@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Book } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
-const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
+const RegisterPage = () => {
+  const navigate = useNavigate();
+  const { handleRegister } = useAuth();
+  
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -11,23 +16,33 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setError(''); // Clear previous errors
-    setSuccess(''); // Clear previous success messages
+    setError('');
+    setSuccess('');
+    setLoading(true);
     
     console.log('📝 Submitting registration with data:', formData);
     
     try {
-      const response = await handleRegister(formData);
+      // Send data exactly as backend expects
+      const registrationData = {
+        firstName: formData.firstName.trim(),
+        lastName: formData.lastName.trim(),
+        email: formData.email.trim(),
+        password: formData.password,
+        phone: formData.phone.trim() || null
+      };
+
+      const response = await handleRegister(registrationData);
       console.log('📥 Registration response:', response);
       
       if (response && response.success) {
         setSuccess('Registration successful! Please login.');
-        setTimeout(() => setCurrentPage('login'), 2000);
+        setTimeout(() => navigate('/login'), 2000);
       } else {
-        // Show the specific error message from backend
         const errorMessage = response?.message || 'Registration failed. Please try again.';
         console.log('❌ Registration failed:', errorMessage);
         setError(errorMessage);
@@ -35,6 +50,8 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
     } catch (error) {
       console.error('💥 Registration error:', error);
       setError('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,24 +68,28 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
           {/* First Name and Last Name Row */}
           <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '20px'}}>
             <div>
-              <label className="form-label">First Name *</label>
+              <label className="form-label" htmlFor="firstName">First Name *</label>
               <input
+                id="firstName"
                 type="text"
                 value={formData.firstName}
                 onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                 className="form-input"
                 placeholder="Enter first name"
+                autoComplete="given-name"
                 required
               />
             </div>
             <div>
-              <label className="form-label">Last Name *</label>
+              <label className="form-label" htmlFor="lastName">Last Name *</label>
               <input
+                id="lastName"
                 type="text"
                 value={formData.lastName}
                 onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                 className="form-input"
                 placeholder="Enter last name"
+                autoComplete="family-name"
                 required
               />
             </div>
@@ -76,38 +97,44 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
 
           {/* Email */}
           <div className="form-group">
-            <label className="form-label">Email *</label>
+            <label className="form-label" htmlFor="email">Email *</label>
             <input
+              id="email"
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
               className="form-input"
               placeholder="Enter your email (e.g., john@example.com)"
+              autoComplete="username"
               required
             />
           </div>
 
           {/* Phone */}
           <div className="form-group">
-            <label className="form-label">Phone</label>
+            <label className="form-label" htmlFor="phone">Phone</label>
             <input
+              id="phone"
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({...formData, phone: e.target.value})}
               className="form-input"
               placeholder="Enter your phone number (e.g., 1234567890)"
+              autoComplete="tel"
             />
           </div>
 
           {/* Password */}
           <div className="form-group">
-            <label className="form-label">Password *</label>
+            <label className="form-label" htmlFor="password">Password *</label>
             <input
+              id="password"
               type="password"
               value={formData.password}
               onChange={(e) => setFormData({...formData, password: e.target.value})}
               className="form-input"
               placeholder="Create a password (min 6 characters)"
+              autoComplete="new-password"
               required
               minLength="6"
             />
@@ -146,8 +173,8 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
         {/* Sign In Link */}
         <div className="auth-link">
           <span style={{color: '#6b7280'}}>Already have an account? </span>
-          <button
-            onClick={() => setCurrentPage('login')}
+          <Link
+            to="/login"
             style={{
               background: 'none', 
               border: 'none', 
@@ -158,7 +185,7 @@ const RegisterPage = ({ handleRegister, setCurrentPage, loading }) => {
             }}
           >
             Sign in
-          </button>
+          </Link>
         </div>
       </div>
     </div>

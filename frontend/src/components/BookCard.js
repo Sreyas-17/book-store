@@ -1,54 +1,30 @@
 import React from "react";
-import { Heart, Plus, Minus } from "lucide-react";
-import StarRating from './StarRating'; 
+import { Heart, Plus, Minus, ShoppingCart } from "lucide-react";
+import StarRating from './StarRating';
+import { useAuth } from '../contexts/AuthContext';
+import { useCart } from '../contexts/CartContext';
+import { useWishlist } from '../contexts/WishlistContext';
 
-const BookCard = ({
-  book,
-  user,
-  addToCart,
-  updateCartQuantity,
-  addToWishlist,
-  removeFromWishlist,
-  isInWishlist,
-  getCartItemQuantity,
-  rateBook, 
-}) => {
- 
-  console.log(
-    "BookCard - Book ID:",
-    book.id,
-    "User:",
-    user?.email || "No user"
-  );
+const BookCard = ({ book, rateBook }) => {
+  const { user } = useAuth();
+  const { addToCart, updateQuantity, cartItems = [] } = useCart();
+  const { addToWishlist, removeFromWishlist, wishlistItems = [] } = useWishlist();
 
-  if (!addToCart || !isInWishlist || !getCartItemQuantity) {
-    console.error("BookCard: Required functions not passed as props");
-    return <div>Error: Missing required functions</div>;
-  }
+  // Get cart quantity for this book
+  const cartItem = cartItems.find(item => item.book?.id === book.id);
+  const cartQuantity = cartItem?.quantity || 0;
 
-  const isWishlisted = isInWishlist(book.id);
-  const cartQuantity = getCartItemQuantity(book.id);
-
-  console.log(
-    "BookCard - Wishlisted:",
-    isWishlisted,
-    "Cart Quantity:",
-    cartQuantity
-  );
+  // Check if book is in wishlist
+  const isInWishlist = wishlistItems.some(item => item.book?.id === book.id);
 
   const handleAddToCart = async () => {
-    console.log("Add to cart clicked for book:", book.id);
-
-    if (!user || !user.id) {
-      console.log("No user logged in, cannot add to cart");
+    if (!user?.id) {
       alert("Please login to add items to cart");
       return;
     }
 
     try {
       const result = await addToCart(book.id, 1);
-      console.log("Add to cart result:", result);
-
       if (result && !result.success) {
         alert("Failed to add to cart: " + result.message);
       }
@@ -59,41 +35,26 @@ const BookCard = ({
   };
 
   const handleUpdateQuantity = async (newQuantity) => {
-    console.log("Update quantity to:", newQuantity, "for book:", book.id);
-
-    if (!user || !user.id) {
-      console.log("No user logged in");
-      return;
-    }
+    if (!user?.id) return;
 
     try {
-      await updateCartQuantity(book.id, newQuantity);
+      await updateQuantity(book.id, newQuantity);
     } catch (error) {
       console.error("Error updating quantity:", error);
     }
   };
 
   const handleWishlistToggle = async () => {
-    console.log(
-      "Wishlist toggle for book:",
-      book.id,
-      "Currently wishlisted:",
-      isWishlisted
-    );
-
-    if (!user || !user.id) {
-      console.log("No user logged in, cannot modify wishlist");
+    if (!user?.id) {
       alert("Please login to manage wishlist");
       return;
     }
 
     try {
-      if (isWishlisted) {
-        const result = await removeFromWishlist(book.id);
-        console.log("Remove from wishlist result:", result);
+      if (isInWishlist) {
+        await removeFromWishlist(book.id);
       } else {
-        const result = await addToWishlist(book.id);
-        console.log("Add to wishlist result:", result);
+        await addToWishlist(book.id);
       }
     } catch (error) {
       console.error("Error updating wishlist:", error);
@@ -102,14 +63,13 @@ const BookCard = ({
   };
 
   const handleRating = async (bookId, rating) => {
-    if (!user || !user.id) {
+    if (!user?.id) {
       alert('Please login to rate books');
       return;
     }
 
     if (rateBook) {
       try {
-        console.log(' Rating book:', bookId, 'with', rating, 'stars');
         const result = await rateBook(bookId, rating);
         if (result && result.success) {
           alert(`Thank you for rating this book ${rating} stars!`);
@@ -124,31 +84,48 @@ const BookCard = ({
   };
 
   return (
-    <div className="book-card">
-      <img
-        src={
-          book.imageUrl &&
-          book.imageUrl !== "https://example.com/gatsby.jpg" &&
-          book.imageUrl !== "https://example.com/mockingbird.jpg"
-            ? book.imageUrl
-            : `https://via.placeholder.com/300x400/4f46e5/ffffff?text=${encodeURIComponent(
-                book.title
-              )}`
-        }
-        alt={book.title}
-        className="book-image"
-        onError={(e) => {
-          e.target.src = `https://via.placeholder.com/300x400/6366f1/ffffff?text=${encodeURIComponent(
-            book.title
-          )}`;
-        }}
-      />
+    <div className="book-card card-hover group">
+      {/* Book Image */}
+      <div className="relative overflow-hidden">
+        <img
+          src={
+            book.imageUrl &&
+            book.imageUrl !== "https://example.com/gatsby.jpg" &&
+            book.imageUrl !== "https://example.com/mockingbird.jpg"
+              ? book.imageUrl
+              : `https://via.placeholder.com/300x400/4f46e5/ffffff?text=${encodeURIComponent(
+                  book.title
+                )}`
+          }
+          alt={book.title}
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          onError={(e) => {
+            e.target.src = `https://via.placeholder.com/300x400/6366f1/ffffff?text=${encodeURIComponent(
+              book.title
+            )}`;
+          }}
+        />
+        
+        {/* Wishlist Button Overlay */}
+        <button
+          onClick={handleWishlistToggle}
+          className={`absolute top-3 right-3 p-2 rounded-full transition-all duration-200 ${
+            isInWishlist 
+              ? 'bg-red-500 text-white shadow-lg' 
+              : 'bg-white text-gray-600 hover:bg-red-50 hover:text-red-500 shadow-md'
+          }`}
+        >
+          <Heart size={16} fill={isInWishlist ? "currentColor" : "none"} />
+        </button>
+      </div>
 
-      <div className="book-content">
+      {/* Book Content */}
+      <div className="card-body">
         <h3 className="book-title">{book.title}</h3>
         <p className="book-author">by {book.author}</p>
 
-        <div className="book-rating">
+        {/* Rating */}
+        <div className="mb-3">
           <StarRating
             bookId={book.id}
             currentRating={book.ratingAvg || 0}
@@ -159,42 +136,39 @@ const BookCard = ({
           />
         </div>
 
-        <div className="book-price-row">
-          <span className="book-price">{book.price}</span>
-          <span className="book-stock">Stock: {book.stockQuantity}</span>
+        {/* Price and Stock */}
+        <div className="flex justify-between items-center mb-4">
+          <span className="book-price">${book.price}</span>
+          <span className="text-sm text-gray-500">Stock: {book.stockQuantity}</span>
         </div>
 
-        <div className="book-actions">
+        {/* Actions */}
+        <div className="flex items-center gap-2">
           {cartQuantity > 0 ? (
-            <div className="quantity-controls">
+            <div className="flex items-center bg-gray-100 rounded-lg p-1 flex-1">
               <button
                 onClick={() => handleUpdateQuantity(cartQuantity - 1)}
-                className="quantity-btn"
+                className="p-1 hover:bg-gray-200 rounded transition-colors duration-200"
               >
                 <Minus size={16} />
               </button>
-              <span className="quantity-display">{cartQuantity}</span>
+              <span className="px-3 py-1 text-sm font-medium">{cartQuantity}</span>
               <button
                 onClick={() => handleUpdateQuantity(cartQuantity + 1)}
-                className="quantity-btn"
+                className="p-1 hover:bg-gray-200 rounded transition-colors duration-200"
               >
                 <Plus size={16} />
               </button>
             </div>
           ) : (
-            <button onClick={handleAddToCart} className="add-to-cart-btn">
+            <button 
+              onClick={handleAddToCart} 
+              className="btn btn-primary flex-1 flex items-center justify-center gap-2"
+            >
+              <ShoppingCart size={16} />
               Add to Cart
             </button>
           )}
-
-          <button
-            onClick={handleWishlistToggle}
-            className={`wishlist-btn ${
-              isWishlisted ? "wishlist-btn-active" : "wishlist-btn-inactive"
-            }`}
-          >
-            <Heart size={20} fill={isWishlisted ? "currentColor" : "none"} />
-          </button>
         </div>
       </div>
     </div>

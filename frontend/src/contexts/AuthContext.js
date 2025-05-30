@@ -101,12 +101,19 @@ export const AuthProvider = ({ children }) => {
       console.log('Register response:', response);
       return response;
     } catch (error) {
-      console.error('Register error:', error);
-      return { success: false, message: 'Network error occurred' };
+      console.error('Registration error:', error);
+      
+      // Return structured error response
+      return {
+        success: false,
+        message: error.response?.data?.message || error.message || 'Registration failed',
+        status: error.response?.status || 500
+      };
     } finally {
       setLoading(false);
     }
   };
+  
 
   const handleLogout = () => {
     console.log('Logging out user...');

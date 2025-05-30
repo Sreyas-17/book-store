@@ -4,7 +4,7 @@ import { useVendor } from '../hooks/useVendor';
 import VendorBooks from '../vendor/VendorBooks';
 import VendorStats from '../vendor/VendorBooks';
 import AddBookModal from '../vendor/VendorBooks';
-import '../index.css';
+
 
 const VendorDashboard = () => {
   const { user } = useAuth();
