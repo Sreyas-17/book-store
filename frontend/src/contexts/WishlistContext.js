@@ -14,6 +14,9 @@ export const useWishlist = () => {
 };
 
 export const WishlistProvider = ({ children }) => {
+  const [wishlistItems, setWishlistItems] = useState([]); // Initialize as empty array
+  const [loading, setLoading] = useState(false);
+  const { isAuthenticated } = useAuth();
   const [wishlist, setWishlist] = useState([]);
   const { user } = useAuth();
 

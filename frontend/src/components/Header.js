@@ -1,161 +1,242 @@
-import React, { useState } from 'react';
-import { Book, Search, Heart, ShoppingCart, User } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import { useCart } from '../contexts/CartContext';
+import { useWishlist } from '../contexts/WishlistContext';
+import { useBooks } from '../hooks/useBooks';
+import '../index.css';
 
-const Header = ({ 
-  user, 
-  cart, 
-  wishlist, 
-  searchTerm, 
-  setCurrentPage, 
-  setSearchTerm, 
-  searchBooks, 
-  searchByAuthor,
-  handleLogout 
-}) => {
-  const [searchType, setSearchType] = useState('title');
+const Header = () => {
+  const { user, isAuthenticated, logout } = useAuth();
+  const { cartItems = [] } = useCart(); // Default to empty array
+  const { wishlistItems = [] } = useWishlist(); // Default to empty array
+  const { searchBooks } = useBooks();
+  const navigate = useNavigate();
+  const location = useLocation();
   
-  console.log('Header render - User:', user);
-  console.log('Header render - Cart length:', cart?.length || 0);
-  console.log('Header render - Wishlist length:', wishlist?.length || 0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsProfileDropdownOpen(false);
+  }, [location.pathname]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.profile-dropdown') && !event.target.closest('.profile-menu-trigger')) {
+        setIsProfileDropdownOpen(false);
+      }
+      if (!event.target.closest('.mobile-menu') && !event.target.closest('.menu-toggle')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      searchBooks(searchQuery.trim());
+      if (location.pathname !== '/') {
+        navigate('/');
+      }
+    }
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+    setIsProfileDropdownOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
+  // Safe calculation with defensive checks
+  const cartItemCount = Array.isArray(cartItems) 
+    ? cartItems.reduce((total, item) => total + (item?.quantity || 0), 0)
+    : 0;
   
+  const wishlistItemCount = Array.isArray(wishlistItems) 
+    ? wishlistItems.length 
+    : 0;
+
+  const getDashboardLink = () => {
+    if (user?.role === 'ADMIN') {
+      return { path: '/admin', label: 'Admin Dashboard' };
+    } else if (user?.role === 'VENDOR') {
+      return { path: '/vendor', label: 'Vendor Dashboard' };
+    }
+    return null;
+  };
+
+  const dashboardLink = getDashboardLink();
+
   return (
     <header className="header">
-      <div className="header-content">
-        <div className="logo" onClick={() => setCurrentPage('home')}>
-          <Book size={32} />
-          <span>BookStore</span>
+      <div className="header-container">
+        {/* Logo */}
+        <div className="logo">
+          <Link to="/" className="logo-link">
+            <h1>BookStore</h1>
+          </Link>
         </div>
 
-        <div className="search-container">
-          <div className="search-wrapper" style={{
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: '#f5f5f5',
-            borderRadius: '8px',
-            padding: '8px 16px',
-            width: '100%',
-            maxWidth: '700px',
-            border: '1px solid #e0e0e0',
-            height: '48px'
-          }}>
-            <select 
-              value={searchType}
-              onChange={(e) => setSearchType(e.target.value)}
-              className="search-type-select"
-              style={{
-                padding: '8px 12px',
-                marginRight: '8px',
-                borderRadius: '4px',
-                border: 'none',
-                backgroundColor: 'transparent',
-                color: '#333',
-                fontSize: '15px',
-                cursor: 'pointer',
-                outline: 'none',
-                width: '160px',
-                height: '36px'
-              }}
-            >
-              <option value="title">Title</option>
-              <option value="author"> Author</option>
-            </select>
-            <div style={{ width: '1px', height: '28px', backgroundColor: '#e0e0e0', margin: '0 12px' }}></div>
-            <Search className="search-icon" size={18} style={{ color: '#666', marginRight: '16px' }} />
+        {/* Search Bar */}
+        <div className="search-section">
+          <form onSubmit={handleSearch} className="search-form">
             <input
               type="text"
-              placeholder={`Search by ${searchType}`}
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-                if (searchType === 'title') {
-                  searchBooks(e.target.value);
-                } else {
-                  searchByAuthor(e.target.value);
-                }
-              }}
+              placeholder="Search books by title or author..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
-              style={{
-                border: 'none',
-                backgroundColor: 'transparent',
-                padding: '8px 12px',
-                width: '100%',
-                fontSize: '15px',
-                outline: 'none',
-                height: '36px',
-                marginLeft: '4px'
-              }}
             />
-          </div>
+            <button type="submit" className="search-button">
+              <span className="search-icon">🔍</span>
+            </button>
+          </form>
         </div>
 
-        <nav className="nav">
-          {user && user.id ? (
-            <>
-              <button
-                onClick={() => setCurrentPage('wishlist')}
-                className="nav-item"
-                style={{background: 'none', border: 'none', cursor: 'pointer'}}
-              >
-                <Heart size={20} />
-                <span>Wishlist</span>
-                {wishlist && wishlist.length > 0 && (
-                  <span className="nav-badge">{wishlist.length}</span>
-                )}
-              </button>
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
 
-              <button
-                onClick={() => setCurrentPage('cart')}
-                className="nav-item"
-                style={{background: 'none', border: 'none', cursor: 'pointer'}}
-              >
-                <ShoppingCart size={20} />
-                <span>Cart</span>
-                {cart && cart.length > 0 && (
-                  <span className="nav-badge">{cart.length}</span>
-                )}
-              </button>
-
-              <div className="dropdown">
-                <button 
-                  className="nav-item"
-                  style={{background: 'none', border: 'none', cursor: 'pointer'}}
-                >
-                  <User size={20} />
-                  <span>{user.firstName || 'User'}</span>
-                </button>
-                <div className="dropdown-menu">
-                  <button
-                    onClick={() => setCurrentPage('profile')}
-                    className="dropdown-item"
-                    style={{background: 'none', border: 'none', width: '100%'}}
-                  >
-                    Profile
-                  </button>
-                  <button
-                    onClick={() => setCurrentPage('orders')}
-                    className="dropdown-item"
-                    style={{background: 'none', border: 'none', width: '100%'}}
-                  >
-                    Orders
-                  </button>
-                  <button
-                    onClick={handleLogout}
-                    className="dropdown-item"
-                    style={{background: 'none', border: 'none', width: '100%'}}
-                  >
-                    Logout
-                  </button>
-                </div>
-              </div>
-            </>
-          ) : (
-            <button
-              onClick={() => setCurrentPage('login')}
-              className="btn btn-primary"
+        {/* Navigation */}
+        <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
+          <div className="nav-links">
+            {/* Home Link */}
+            <Link 
+              to="/" 
+              className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
             >
-              Sign In
-            </button>
-          )}
+              Home
+            </Link>
+
+            {/* Authenticated User Links */}
+            {isAuthenticated ? (
+              <>
+                {/* Dashboard Link (Role-based) */}
+                {dashboardLink && (
+                  <Link 
+                    to={dashboardLink.path} 
+                    className={`nav-link dashboard-link ${location.pathname === dashboardLink.path ? 'active' : ''}`}
+                  >
+                    {dashboardLink.label}
+                  </Link>
+                )}
+
+                {/* Cart Link */}
+                <Link 
+                  to="/cart" 
+                  className={`nav-link cart-link ${location.pathname === '/cart' ? 'active' : ''}`}
+                >
+                  <span className="nav-icon">🛒</span>
+                  <span className="nav-text">Cart</span>
+                  {cartItemCount > 0 && (
+                    <span className="badge cart-badge">{cartItemCount}</span>
+                  )}
+                </Link>
+
+                {/* Wishlist Link */}
+                <Link 
+                  to="/wishlist" 
+                  className={`nav-link wishlist-link ${location.pathname === '/wishlist' ? 'active' : ''}`}
+                >
+                  <span className="nav-icon">❤️</span>
+                  <span className="nav-text">Wishlist</span>
+                  {wishlistItemCount > 0 && (
+                    <span className="badge wishlist-badge">{wishlistItemCount}</span>
+                  )}
+                </Link>
+
+                {/* Orders Link */}
+                <Link 
+                  to="/orders" 
+                  className={`nav-link ${location.pathname === '/orders' ? 'active' : ''}`}
+                >
+                  Orders
+                </Link>
+
+                {/* Profile Dropdown */}
+                <div className="profile-dropdown">
+                  <button 
+                    className="profile-menu-trigger"
+                    onClick={toggleProfileDropdown}
+                    aria-label="Profile menu"
+                  >
+                    <span className="profile-icon">👤</span>
+                    <span className="profile-name">{user?.name || 'Profile'}</span>
+                    <span className={`dropdown-arrow ${isProfileDropdownOpen ? 'open' : ''}`}>▼</span>
+                  </button>
+                  
+                  {isProfileDropdownOpen && (
+                    <div className="profile-dropdown-menu">
+                      <div className="profile-info">
+                        <div className="profile-name-full">{user?.name}</div>
+                        <div className="profile-email">{user?.email}</div>
+                        {user?.role && (
+                          <div className="profile-role">{user.role}</div>
+                        )}
+                      </div>
+                      <div className="dropdown-divider"></div>
+                      <Link 
+                        to="/profile" 
+                        className="dropdown-link"
+                        onClick={() => setIsProfileDropdownOpen(false)}
+                      >
+                        <span className="dropdown-icon">⚙️</span>
+                        Profile Settings
+                      </Link>
+                      <button 
+                        onClick={handleLogout}
+                        className="dropdown-link logout-btn"
+                      >
+                        <span className="dropdown-icon">🚪</span>
+                        Logout
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </>
+            ) : (
+              /* Guest User Links */
+              <>
+                <Link 
+                  to="/login" 
+                  className={`nav-link login-link ${location.pathname === '/login' ? 'active' : ''}`}
+                >
+                  Login
+                </Link>
+                <Link 
+                  to="/register" 
+                  className={`nav-link register-link ${location.pathname === '/register' ? 'active' : ''}`}
+                >
+                  Register
+                </Link>
+              </>
+            )}
+          </div>
         </nav>
       </div>
     </header>

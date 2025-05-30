@@ -14,6 +14,9 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState([]); // Initialize as empty array
+  const [loading, setLoading] = useState(false);
+  const { isAuthenticated } = useAuth();
   const [cart, setCart] = useState([]);
   const { user } = useAuth();
 

@@ -1,55 +1,81 @@
-import React from 'react';
-import { Book } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { useBooks } from '../hooks/useBooks';
+import { useAuth } from '../contexts/AuthContext';
 import BookCard from './BookCard';
+import '../index.css';
 
-const HomePage = ({ 
-  books,
-  user,
-  addToCart,
-  updateCartQuantity,
-  addToWishlist,
-  removeFromWishlist,
-  isInWishlist,
-  getCartItemQuantity,
-  rateBook 
-}) => {
-  
+const HomePage = () => {
+  const { books = [], loading, error, searchBooks } = useBooks(); // Default to empty array
+  const { isAuthenticated } = useAuth();
 
-  console.log('HomePage - User:', user);
-  console.log('HomePage - Books count:', books.length);
-  console.log('HomePage - rateBook function:', typeof rateBook);
-  
-  return (
-    <div className="container">
-      <div className="page-header">
-        <h2 className="page-title">Featured Books</h2>
-        <p className="page-subtitle">Discover your next great read</p>
-      </div>
+  useEffect(() => {
+    // Initial load of books if needed
+    if (!books || books.length === 0) {
+      // You might want to fetch all books initially
+      // searchBooks(''); // or call a fetchAllBooks function
+    }
+  }, []);
 
-      <div className="book-grid">
-        {books.map((book) => (
-          <BookCard 
-            key={book.id} 
-            book={book}
-            user={user}
-            addToCart={addToCart}
-            updateCartQuantity={updateCartQuantity}
-            addToWishlist={addToWishlist}
-            removeFromWishlist={removeFromWishlist}
-            isInWishlist={isInWishlist}
-            getCartItemQuantity={getCartItemQuantity}
-            rateBook={rateBook} 
-          />
-        ))}
-      </div>
+  // Defensive check - ensure books is always an array
+  const safeBooks = Array.isArray(books) ? books : [];
 
-      {books.length === 0 && (
-        <div className="empty-state">
-          <Book className="empty-icon" size={64} />
-          <h3 className="empty-title">No books found</h3>
-          <p className="empty-description">Try adjusting your search terms</p>
+  if (loading) {
+    return (
+      <div className="homepage">
+        <div className="loading-container">
+          <div className="loading-spinner">Loading books...</div>
         </div>
-      )}
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="homepage">
+        <div className="error-container">
+          <p className="error-message">Error: {error}</p>
+          <button onClick={() => window.location.reload()}>
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="homepage">
+      <div className="hero-section">
+        <h1>Welcome to BookStore</h1>
+        <p>Discover your next favorite book</p>
+      </div>
+
+      <div className="books-section">
+        <div className="books-header">
+          <h2>Featured Books</h2>
+          {safeBooks.length > 0 && (
+            <p className="books-count">
+              {safeBooks.length} book{safeBooks.length !== 1 ? 's' : ''} found
+            </p>
+          )}
+        </div>
+
+        {safeBooks.length === 0 ? (
+          <div className="no-books">
+            <p>No books available at the moment.</p>
+            <p>Try searching for specific books using the search bar above.</p>
+          </div>
+        ) : (
+          <div className="books-grid">
+            {safeBooks.map((book) => (
+              <BookCard 
+                key={book.id} 
+                book={book} 
+                showActions={isAuthenticated}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
