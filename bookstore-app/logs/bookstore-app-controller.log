@@ -166,3 +166,27 @@
 2025-05-29 11:18:09.823 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
 2025-05-29 11:18:09.829 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 1
 >>>>>>> 62309e5ab16023dc92983ce45d14a14b622872e3
+2025-05-31 11:27:59.682 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:27:59.776 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/5 - Fetching cart items
+2025-05-31 11:27:59.776 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/5 - Fetching user orders
+2025-05-31 11:27:59.776 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/5 - Fetching user wishlist
+2025-05-31 11:27:59.776 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/5 - Fetching user addresses
+2025-05-31 11:27:59.830 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 0 addresses for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 5
+2025-05-31 11:27:59.831 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:27:59.908 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:27:59.916 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:28:05.505 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:28:05.526 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/5 - Fetching user orders
+2025-05-31 11:28:05.527 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/5 - Fetching cart items
+2025-05-31 11:28:05.527 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/5 - Fetching user addresses
+2025-05-31 11:28:05.529 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/5 - Fetching user wishlist
+2025-05-31 11:28:05.539 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 0 addresses for user ID: 5
+2025-05-31 11:28:05.540 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 5
+2025-05-31 11:28:05.541 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 5
+2025-05-31 11:28:05.541 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 5
+2025-05-31 11:28:05.543 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:28:05.557 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:28:05.567 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books

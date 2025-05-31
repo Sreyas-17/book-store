@@ -1061,3 +1061,212 @@ This generated password is for development use only. Your security configuration
 =======
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.7.jar:6.2.7]
 >>>>>>> 62309e5ab16023dc92983ce45d14a14b622872e3
+2025-05-31 11:27:48.623 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-31 11:27:48.654 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Starting BookstoreAppApplication using Java 23.0.2 with PID 25342 (/Users/mayankpal/Desktop/finalBridglabz/bookstore-app/target/classes started by mayankpal in /Users/mayankpal/Desktop/finalBridglabz/bookstore-app)
+2025-05-31 11:27:48.657 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-31 11:27:49.212 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 11:27:49.262 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 9 JPA repository interfaces.
+2025-05-31 11:27:49.724 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-31 11:27:49.732 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-31 11:27:49.733 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 11:27:49.734 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-05-31 11:27:49.794 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 11:27:49.796 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1105 ms
+2025-05-31 11:27:49.937 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 11:27:49.986 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-05-31 11:27:49.988 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-05-31 11:27:50.170 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 11:27:50.190 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 11:27:50.673 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e0d058a
+2025-05-31 11:27:50.675 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 11:27:50.741 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31 11:27:50.743 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-31 11:27:52.056 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 11:27:52.291 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 11:27:52.646 [main] INFO  org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-31 11:27:53.655 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31 11:27:53.680 [main] WARN  org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1d74dbbc-58d7-4ea2-8171-7d5b9267bca9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31 11:27:53.998 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40c31127, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bcecdd, org.springframework.security.web.context.SecurityContextHolderFilter@171b3f38, org.springframework.security.web.header.HeaderWriterFilter@732d2b59, org.springframework.web.filter.CorsFilter@55f2e76a, org.springframework.security.web.authentication.logout.LogoutFilter@260f8704, com.bookstore.bookstore_app.config.JwtAuthenticationFilter@2313db84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cbdc23b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4299b47d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b8f0b64, org.springframework.security.web.session.SessionManagementFilter@abce494, org.springframework.security.web.access.ExceptionTranslationFilter@352bccf, org.springframework.security.web.access.intercept.AuthorizationFilter@6ccb3dd]
+2025-05-31 11:27:54.183 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-31 11:27:54.200 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-31 11:27:54.211 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Started BookstoreAppApplication in 5.787 seconds (process running for 6.685)
+2025-05-31 11:27:59.601 [http-nio-8080-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31 11:27:59.602 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-31 11:27:59.606 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-05-31 11:27:59.617 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/addresses/user/5
+2025-05-31 11:27:59.617 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/wishlist/5
+2025-05-31 11:27:59.617 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/cart/5
+2025-05-31 11:27:59.617 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/books/all
+2025-05-31 11:27:59.617 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/books/all
+2025-05-31 11:27:59.617 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/orders/user/5
+2025-05-31 11:27:59.647 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/cart/5
+2025-05-31 11:27:59.647 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/addresses/user/5
+2025-05-31 11:27:59.647 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/wishlist/5
+2025-05-31 11:27:59.647 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:27:59.648 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/orders/user/5
+2025-05-31 11:27:59.650 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/cart/5
+2025-05-31 11:27:59.650 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:27:59.650 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/wishlist/5
+2025-05-31 11:27:59.650 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/orders/user/5
+2025-05-31 11:27:59.650 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/addresses/user/5
+2025-05-31 11:27:59.651 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:27:59.654 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:27:59.664 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:27:59.682 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:27:59.683 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:27:59.717 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:27:59.717 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:27:59.717 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:27:59.717 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:27:59.723 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:27:59.723 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:27:59.723 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:27:59.723 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:27:59.725 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:27:59.725 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:27:59.725 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:27:59.725 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:27:59.748 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/cart/5
+2025-05-31 11:27:59.751 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/addresses/user/5
+2025-05-31 11:27:59.752 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/orders/user/5
+2025-05-31 11:27:59.754 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/wishlist/5
+2025-05-31 11:27:59.776 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/5 - Fetching cart items
+2025-05-31 11:27:59.776 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/5 - Fetching user orders
+2025-05-31 11:27:59.776 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/5 - Fetching user wishlist
+2025-05-31 11:27:59.776 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/5 - Fetching user addresses
+2025-05-31 11:27:59.776 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 5
+2025-05-31 11:27:59.777 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 5
+2025-05-31 11:27:59.777 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 5
+2025-05-31 11:27:59.777 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 5
+2025-05-31 11:27:59.829 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 5
+2025-05-31 11:27:59.829 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 0 addresses for user ID: 5
+2025-05-31 11:27:59.829 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 5
+2025-05-31 11:27:59.829 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 5
+2025-05-31 11:27:59.830 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 5
+2025-05-31 11:27:59.831 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:27:59.831 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:27:59.905 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:27:59.906 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:27:59.906 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:27:59.906 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:27:59.907 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:27:59.908 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:27:59.908 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:27:59.915 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:27:59.916 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:28:05.463 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/books/all
+2025-05-31 11:28:05.463 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/books/all
+2025-05-31 11:28:05.481 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/cart/5
+2025-05-31 11:28:05.482 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/addresses/user/5
+2025-05-31 11:28:05.483 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/orders/user/5
+2025-05-31 11:28:05.485 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/wishlist/5
+2025-05-31 11:28:05.486 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:28:05.487 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/addresses/user/5
+2025-05-31 11:28:05.488 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/addresses/user/5
+2025-05-31 11:28:05.488 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:28:05.488 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/cart/5
+2025-05-31 11:28:05.489 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:28:05.491 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/orders/user/5
+2025-05-31 11:28:05.491 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:05.492 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/cart/5
+2025-05-31 11:28:05.491 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/wishlist/5
+2025-05-31 11:28:05.493 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/orders/user/5
+2025-05-31 11:28:05.493 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/wishlist/5
+2025-05-31 11:28:05.495 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:28:05.505 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:28:05.505 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:28:05.505 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:28:05.505 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: gg@gmail.com
+2025-05-31 11:28:05.505 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:28:05.507 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:28:05.510 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:28:05.511 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:28:05.510 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:28:05.511 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:28:05.511 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:28:05.511 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:28:05.510 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: gg@gmail.com with role: USER and ID: 5
+2025-05-31 11:28:05.511 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: gg@gmail.com with role: USER
+2025-05-31 11:28:05.522 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/orders/user/5
+2025-05-31 11:28:05.523 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/cart/5
+2025-05-31 11:28:05.525 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/addresses/user/5
+2025-05-31 11:28:05.526 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/5 - Fetching user orders
+2025-05-31 11:28:05.526 [http-nio-8080-exec-8] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 5
+2025-05-31 11:28:05.527 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/5 - Fetching cart items
+2025-05-31 11:28:05.527 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/5 - Fetching user addresses
+2025-05-31 11:28:05.527 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 5
+2025-05-31 11:28:05.527 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 5
+2025-05-31 11:28:05.528 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/wishlist/5
+2025-05-31 11:28:05.529 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/5 - Fetching user wishlist
+2025-05-31 11:28:05.530 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 5
+2025-05-31 11:28:05.538 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 5
+2025-05-31 11:28:05.539 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 0 addresses for user ID: 5
+2025-05-31 11:28:05.538 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 5
+2025-05-31 11:28:05.540 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 5
+2025-05-31 11:28:05.540 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 5
+2025-05-31 11:28:05.541 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 5
+2025-05-31 11:28:05.538 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 5
+2025-05-31 11:28:05.541 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 5
+2025-05-31 11:28:05.543 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:28:05.543 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:28:05.553 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:28:05.555 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:28:05.555 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:28:05.555 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:05.556 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:28:05.557 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:28:05.557 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:28:05.566 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:28:05.567 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:28:26.512 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2025-05-31 11:28:26.519 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/index.html
+2025-05-31 11:28:26.520 [http-nio-8080-exec-10] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.522 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.545 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2025-05-31 11:28:26.627 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2025-05-31 11:28:26.628 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2025-05-31 11:28:26.629 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/index.css
+2025-05-31 11:28:26.629 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-ui.css
+2025-05-31 11:28:26.629 [http-nio-8080-exec-9] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.629 [http-nio-8080-exec-1] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.629 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.629 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2025-05-31 11:28:26.629 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.630 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-ui-bundle.js
+2025-05-31 11:28:26.630 [http-nio-8080-exec-7] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.630 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.634 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2025-05-31 11:28:26.637 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2025-05-31 11:28:26.638 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2025-05-31 11:28:26.656 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2025-05-31 11:28:26.661 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-initializer.js
+2025-05-31 11:28:26.661 [http-nio-8080-exec-5] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.661 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.663 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-31 11:28:26.663 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-31 11:28:26.663 [http-nio-8080-exec-8] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.664 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2025-05-31 11:28:26.663 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.670 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-31 11:28:26.955 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2025-05-31 11:28:26.957 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /v3/api-docs/swagger-config
+2025-05-31 11:28:26.957 [http-nio-8080-exec-4] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:26.958 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:26.961 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2025-05-31 11:28:27.034 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /v3/api-docs/bookstore-api
+2025-05-31 11:28:27.034 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /v3/api-docs/bookstore-api
+2025-05-31 11:28:27.034 [http-nio-8080-exec-2] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 11:28:27.035 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:28:27.036 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /v3/api-docs/bookstore-api
+2025-05-31 11:28:28.133 [http-nio-8080-exec-2] INFO  org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1081 ms
+2025-05-31 11:33:39.930 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 11:33:39.935 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-31 11:33:39.961 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
