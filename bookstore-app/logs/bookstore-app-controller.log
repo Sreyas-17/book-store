@@ -28,3 +28,467 @@
 2025-05-31 10:22:39.450 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 15
 2025-05-31 10:22:39.450 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 15
 2025-05-31 10:22:39.454 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 15
+2025-05-31 12:13:17.287 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-31 12:13:17.294 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-31 12:13:17.331 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-31 12:13:17.331 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-31 12:13:17.331 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-31 12:13:17.339 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-31 12:13:17.340 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-31 12:13:17.351 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-31 12:13:17.351 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-31 12:13:17.359 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-31 12:13:17.359 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-31 12:13:17.520 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-31 12:13:17.523 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-31 12:13:17.643 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-31 12:13:17.645 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-31 12:13:17.662 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-31 12:13:17.662 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-31 12:13:17.678 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-31 12:13:17.680 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-31 12:13:17.696 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-31 12:13:17.696 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-31 12:13:17.696 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-31 12:13:17.711 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 12:13:17.713 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-31 12:13:17.726 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-31 12:13:17.728 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-31 12:13:17.740 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-31 12:13:17.740 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-31 12:13:17.754 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-31 12:13:17.756 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-31 12:13:17.770 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-31 12:13:17.772 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-31 12:13:17.772 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-31 12:13:17.772 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-31 12:13:17.786 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-31 12:13:17.788 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-31 12:13:17.865 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-31 12:13:17.865 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-31 12:13:17.876 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-31 12:13:17.876 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-31 12:13:17.880 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-31 12:13:17.888 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-31 12:13:17.896 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-31 12:13:17.896 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-31 12:13:17.907 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-31 12:13:17.907 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-31 12:13:17.907 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-31 12:13:17.919 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-31 12:13:17.919 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-31 12:13:17.986 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-31 12:13:17.986 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-31 12:13:17.997 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-31 12:13:17.997 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-31 12:13:18.008 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-31 12:13:18.010 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-31 12:13:18.019 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-31 12:13:18.019 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-31 12:13:18.143 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-31 12:13:18.143 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-31 12:13:18.153 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-31 12:13:18.155 [main] ERROR com.bookstore.bookstore_app.controller.UserController - Error during login via API - Email: test@example.com - Error: Cannot invoke "com.bookstore.bookstore_app.dto.LoginResponse.getRole()" because "loginResponse" is null
+java.lang.NullPointerException: Cannot invoke "com.bookstore.bookstore_app.dto.LoginResponse.getRole()" because "loginResponse" is null
+	at com.bookstore.bookstore_app.controller.UserController.login(UserController.java:49) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.UserControllerTest.testLogin(UserControllerTest.java:49) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.5.3.jar:3.5.3]
+2025-05-31 12:13:18.193 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-31 12:13:18.193 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-31 12:13:18.204 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-31 12:13:18.206 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-31 12:13:18.220 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-31 12:13:18.222 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-31 12:13:18.230 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-31 12:13:18.242 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-31 12:13:18.242 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-31 12:13:18.331 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-31 12:13:18.331 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-31 12:13:18.339 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-31 12:13:18.339 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-31 12:13:18.349 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-31 12:13:18.349 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-31 12:13:18.359 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-31 12:13:18.359 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+2025-05-31 14:41:19.036 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-31 14:41:19.051 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-31 14:41:19.067 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-31 14:41:19.067 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-31 14:41:19.067 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-31 14:41:19.067 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-31 14:41:19.067 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-31 14:41:19.088 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-31 14:41:19.088 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-31 14:41:19.088 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-31 14:41:19.088 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-31 14:41:19.244 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-31 14:41:19.244 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-31 14:41:19.368 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-31 14:41:19.368 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-31 14:41:19.381 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-31 14:41:19.381 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-31 14:41:19.398 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-31 14:41:19.398 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-31 14:41:19.413 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-31 14:41:19.413 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-31 14:41:19.413 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-31 14:41:19.440 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 14:41:19.440 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-31 14:41:19.465 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-31 14:41:19.465 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-31 14:41:19.475 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-31 14:41:19.475 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-31 14:41:19.490 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-31 14:41:19.490 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-31 14:41:19.502 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-31 14:41:19.502 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-31 14:41:19.502 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-31 14:41:19.502 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-31 14:41:19.513 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-31 14:41:19.513 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-31 14:41:19.585 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-31 14:41:19.585 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-31 14:41:19.594 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-31 14:41:19.594 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-31 14:41:19.603 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-31 14:41:19.603 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-31 14:41:19.618 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-31 14:41:19.620 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-31 14:41:19.626 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-31 14:41:19.628 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-31 14:41:19.628 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-31 14:41:19.640 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-31 14:41:19.640 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-31 14:41:19.717 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-31 14:41:19.717 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-31 14:41:19.728 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-31 14:41:19.728 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-31 14:41:19.736 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-31 14:41:19.736 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-31 14:41:19.740 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-31 14:41:19.740 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-31 14:41:19.859 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-31 14:41:19.859 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-31 14:41:19.875 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-31 14:41:19.875 [main] ERROR com.bookstore.bookstore_app.controller.UserController - Error during login via API - Email: test@example.com - Error: Cannot invoke "com.bookstore.bookstore_app.dto.LoginResponse.getRole()" because "loginResponse" is null
+java.lang.NullPointerException: Cannot invoke "com.bookstore.bookstore_app.dto.LoginResponse.getRole()" because "loginResponse" is null
+	at com.bookstore.bookstore_app.controller.UserController.login(UserController.java:49) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.UserControllerTest.testLogin(UserControllerTest.java:49) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.5.3.jar:3.5.3]
+2025-05-31 14:41:19.912 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-31 14:41:19.912 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-31 14:41:19.923 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-31 14:41:19.923 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-31 14:41:19.930 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-31 14:41:19.940 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-31 14:41:19.947 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/logout - User logout
+2025-05-31 14:41:19.959 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-31 14:41:19.959 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-31 14:41:20.050 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-31 14:41:20.050 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-31 14:41:20.063 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-31 14:41:20.063 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-31 14:41:20.075 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-31 14:41:20.077 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-31 14:41:20.088 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-31 14:41:20.088 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+2025-05-31 14:44:12.751 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - PUT /api/addresses/1 - Updating address
+2025-05-31 14:44:12.759 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address updated successfully with ID: 1
+2025-05-31 14:44:12.807 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - POST /api/addresses/add - Adding new address
+2025-05-31 14:44:12.807 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - Address data received: {country=Test Country, city=Test City, postalCode=12345, addressLine1=123 Main St, state=Test State, userId=1}
+2025-05-31 14:44:12.809 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User ID extracted: 1
+2025-05-31 14:44:12.809 [main] DEBUG com.bookstore.bookstore_app.controller.AddressController - User found: test@example.com
+2025-05-31 14:44:12.811 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address added successfully with ID: 1 for user: test@example.com
+2025-05-31 14:44:12.816 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - DELETE /api/addresses/1 - Deleting address
+2025-05-31 14:44:12.816 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Address deleted successfully with ID: 1
+2025-05-31 14:44:12.816 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-31 14:44:12.816 [main] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 1 addresses for user ID: 1
+2025-05-31 14:44:12.977 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/rating - Searching by rating >= 4.5
+2025-05-31 14:44:12.977 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by rating returned 1 books with rating >= 4.5
+2025-05-31 14:44:13.092 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/new-arrivals - Page: 0, Size: 10
+2025-05-31 14:44:13.092 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API new arrivals returned 0 books on page 0
+2025-05-31 14:44:13.101 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-asc - Page: 0, Size: 10
+2025-05-31 14:44:13.105 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (asc) returned 0 books on page 0
+2025-05-31 14:44:13.116 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/add - Adding new book: New Book
+2025-05-31 14:44:13.116 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book added successfully via API - ID: null, Title: New Book
+2025-05-31 14:44:13.130 [main] INFO  com.bookstore.bookstore_app.controller.BookController - PUT /api/books/1/image - Updating book image
+2025-05-31 14:44:13.130 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - New image URL: http://example.com/image.jpg
+2025-05-31 14:44:13.130 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book image updated successfully via API - Book ID: 1
+2025-05-31 14:44:13.141 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 14:44:13.141 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 1 books
+2025-05-31 14:44:13.156 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/title - Searching by title: Test Title
+2025-05-31 14:44:13.156 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by title returned 1 books for: Test Title
+2025-05-31 14:44:13.170 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/sort/price-desc - Page: 0, Size: 10
+2025-05-31 14:44:13.172 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API price sort (desc) returned 0 books on page 0
+2025-05-31 14:44:13.181 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/paginated - Page: 0, Size: 10
+2025-05-31 14:44:13.181 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API pagination returned 0 books on page 0 of 0
+2025-05-31 14:44:13.198 [main] INFO  com.bookstore.bookstore_app.controller.BookController - POST /api/books/1/rate - Rating book
+2025-05-31 14:44:13.198 [main] DEBUG com.bookstore.bookstore_app.controller.BookController - Rating data: {rating=5, userId=1}
+2025-05-31 14:44:13.198 [main] INFO  com.bookstore.bookstore_app.controller.BookController - User ID: 1, Rating: 5 stars for book ID: 1
+2025-05-31 14:44:13.198 [main] INFO  com.bookstore.bookstore_app.controller.BookController - Book rated successfully via API - Book: null, New Rating: 0
+2025-05-31 14:44:13.209 [main] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/search/author - Searching by author: Test Author
+2025-05-31 14:44:13.214 [main] INFO  com.bookstore.bookstore_app.controller.BookController - API search by author returned 1 books for: Test Author
+2025-05-31 14:44:13.289 [main] INFO  com.bookstore.bookstore_app.controller.CartController - PUT /api/cart/update-quantity - User ID: 1, Book ID: 1, Quantity: 2
+2025-05-31 14:44:13.289 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart quantity updated successfully via API
+2025-05-31 14:44:13.302 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/1/clear - Clearing cart
+2025-05-31 14:44:13.302 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart cleared successfully via API - User ID: 1
+2025-05-31 14:44:13.313 [main] INFO  com.bookstore.bookstore_app.controller.CartController - DELETE /api/cart/remove - User ID: 1, Book ID: 1
+2025-05-31 14:44:13.313 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item removed from cart successfully via API - User ID: 1, Book ID: 1
+2025-05-31 14:44:13.327 [main] INFO  com.bookstore.bookstore_app.controller.CartController - POST /api/cart/add - User ID: 1, Book ID: 1, Quantity: 1
+2025-05-31 14:44:13.327 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Item added to cart successfully via API - Cart Item ID: 1
+2025-05-31 14:44:13.333 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-31 14:44:13.333 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 1 cart items via API for user ID: 1
+2025-05-31 14:44:13.333 [main] DEBUG com.bookstore.bookstore_app.controller.CartController - Cart Item - ID: null, Book: null, Quantity: 1
+2025-05-31 14:44:13.333 [main] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1/total - Calculating cart total
+2025-05-31 14:44:13.333 [main] INFO  com.bookstore.bookstore_app.controller.CartController - Cart total calculated via API - User ID: 1, Total: 100.00
+2025-05-31 14:44:13.411 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - PUT /api/orders/1/status - Updating order status to: CONFIRMED
+2025-05-31 14:44:13.411 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order status updated successfully via API - Order ID: 1, New Status: CONFIRMED
+2025-05-31 14:44:13.420 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-31 14:44:13.420 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 1 orders via API for user ID: 1
+2025-05-31 14:44:13.432 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - POST /api/orders/create - Creating order for user ID: 1, address ID: 1
+2025-05-31 14:44:13.432 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order created successfully via API - Order ID: 1, Number: null, Total: null
+2025-05-31 14:44:13.440 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/1 - Fetching order by ID
+2025-05-31 14:44:13.440 [main] INFO  com.bookstore.bookstore_app.controller.OrderController - Order retrieved via API - Order ID: 1, Number: null
+2025-05-31 14:44:13.544 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/verify/1 - User verification request
+2025-05-31 14:44:13.544 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User verification successful via API - User ID: 1
+2025-05-31 14:44:13.553 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: test@example.com
+2025-05-31 14:44:13.553 [main] ERROR com.bookstore.bookstore_app.controller.UserController - Error during login via API - Email: test@example.com - Error: Cannot invoke "com.bookstore.bookstore_app.dto.LoginResponse.getRole()" because "loginResponse" is null
+java.lang.NullPointerException: Cannot invoke "com.bookstore.bookstore_app.dto.LoginResponse.getRole()" because "loginResponse" is null
+	at com.bookstore.bookstore_app.controller.UserController.login(UserController.java:49) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.UserControllerTest.testLogin(UserControllerTest.java:49) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) [surefire-junit-platform-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.5.3.jar:3.5.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.5.3.jar:3.5.3]
+2025-05-31 14:44:13.583 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/forgot-password - Password reset request for email: test@example.com
+2025-05-31 14:44:13.583 [main] INFO  com.bookstore.bookstore_app.controller.UserController - Password reset processed via API - Email: test@example.com
+2025-05-31 14:44:13.589 [main] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/register - Registration attempt for email: test@example.com
+2025-05-31 14:44:13.589 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User registration successful via API - Email: test@example.com
+2025-05-31 14:44:13.606 [main] INFO  com.bookstore.bookstore_app.controller.UserController - PUT /api/auth/profile/1 - Updating user profile
+2025-05-31 14:44:13.606 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile updated successfully via API - User ID: 1
+2025-05-31 14:44:13.628 [main] INFO  com.bookstore.bookstore_app.controller.UserController - GET /api/auth/profile - Fetching user profile
+2025-05-31 14:44:13.628 [main] INFO  com.bookstore.bookstore_app.controller.UserController - User profile retrieved successfully via API - Email: test@example.com
+2025-05-31 14:44:13.699 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-31 14:44:13.699 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 1 wishlist items via API for user ID: 1
+2025-05-31 14:44:13.708 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/add - Adding to wishlist - User ID: 1, Book ID: 1
+2025-05-31 14:44:13.708 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book added to wishlist successfully via API - Wishlist ID: 1
+2025-05-31 14:44:13.723 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - DELETE /api/wishlist/remove - Removing from wishlist - User ID: 1, Book ID: 1
+2025-05-31 14:44:13.723 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
+2025-05-31 14:44:13.731 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
+2025-05-31 14:44:13.731 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1

@@ -2,6 +2,7 @@ package com.bookstore.bookstore_app.controller;
 
 import com.bookstore.bookstore_app.dto.ApiResponse;
 import com.bookstore.bookstore_app.dto.LoginRequest;
+import com.bookstore.bookstore_app.dto.LoginResponse;
 import com.bookstore.bookstore_app.dto.RegisterRequest;
 import com.bookstore.bookstore_app.entity.User;
 import com.bookstore.bookstore_app.service.UserService;
@@ -45,7 +46,7 @@ public class UserControllerTest {
         request.setEmail("test@example.com");
         when(userService.login(request)).thenReturn("token");
 
-        ResponseEntity<ApiResponse<String>> response = userController.login(request);
+        ResponseEntity<ApiResponse<LoginResponse>> response = userController.login(request);
 
         assertEquals(200, response.getStatusCode().value());
         assertEquals("token", response.getBody().getData());
