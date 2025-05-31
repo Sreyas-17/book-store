@@ -3482,3 +3482,419 @@ java.lang.NullPointerException: null
 2025-05-31 11:13:44.213 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
 2025-05-31 11:13:44.218 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
 2025-05-31 11:13:44.218 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:28:26.422 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m723ms).
+2025-05-31 11:42:39.613 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 11:42:39.617 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-31 11:42:39.624 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-31 11:52:47.603 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-31 11:52:47.623 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Starting BookstoreAppApplication using Java 23.0.2 with PID 49489 (/Users/arnavsaharan/Desktop/book-store/bookstore-app/target/classes started by arnavsaharan in /Users/arnavsaharan/Desktop/book-store)
+2025-05-31 11:52:47.624 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-31 11:52:48.034 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 11:52:48.073 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 9 JPA repository interfaces.
+2025-05-31 11:52:48.408 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-31 11:52:48.412 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-31 11:52:48.414 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 11:52:48.414 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-05-31 11:52:48.458 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 11:52:48.459 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 813 ms
+2025-05-31 11:52:48.551 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 11:52:48.576 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-05-31 11:52:48.577 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-05-31 11:52:48.700 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 11:52:48.715 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 11:52:48.952 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29bd2796
+2025-05-31 11:52:48.952 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 11:52:48.987 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31 11:52:48.988 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-31 11:52:49.513 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 11:52:49.612 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 11:52:49.877 [main] INFO  org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-31 11:52:50.456 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31 11:52:50.467 [main] WARN  org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a7931de7-1075-4309-a366-986049119735
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31 11:52:50.623 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23327c53, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58a2c6a, org.springframework.security.web.context.SecurityContextHolderFilter@7931cea2, org.springframework.security.web.header.HeaderWriterFilter@4518bffd, org.springframework.web.filter.CorsFilter@260f8704, org.springframework.security.web.authentication.logout.LogoutFilter@45bf1ee3, com.bookstore.bookstore_app.config.JwtAuthenticationFilter@71936a92, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45e97963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1be598c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ea01c2a, org.springframework.security.web.session.SessionManagementFilter@7e6bfd2, org.springframework.security.web.access.ExceptionTranslationFilter@5a271f3b, org.springframework.security.web.access.intercept.AuthorizationFilter@5decbb5f]
+2025-05-31 11:52:50.770 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-31 11:52:50.778 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-31 11:52:50.784 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Started BookstoreAppApplication in 3.309 seconds (process running for 3.837)
+2025-05-31 11:52:56.562 [http-nio-8080-exec-6] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31 11:52:56.562 [http-nio-8080-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-31 11:52:56.564 [http-nio-8080-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-05-31 11:52:56.569 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/wishlist/3
+2025-05-31 11:52:56.569 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/books/all
+2025-05-31 11:52:56.569 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/books/all
+2025-05-31 11:52:56.569 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/addresses/user/3
+2025-05-31 11:52:56.569 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/cart/3
+2025-05-31 11:52:56.569 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/orders/user/3
+2025-05-31 11:52:56.584 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:52:56.584 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/orders/user/3
+2025-05-31 11:52:56.584 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/addresses/user/3
+2025-05-31 11:52:56.584 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/admin/dashboard
+2025-05-31 11:52:56.585 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/admin/vendors/pending
+2025-05-31 11:52:56.585 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/admin/books/pending
+2025-05-31 11:52:56.586 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/orders/user/3
+2025-05-31 11:52:56.586 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/addresses/user/3
+2025-05-31 11:52:56.586 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:52:56.587 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:52:56.587 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/wishlist/3
+2025-05-31 11:52:56.587 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/admin/dashboard
+2025-05-31 11:52:56.588 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/cart/3
+2025-05-31 11:52:56.588 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/admin/dashboard
+2025-05-31 11:52:56.588 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/wishlist/3
+2025-05-31 11:52:56.588 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/cart/3
+2025-05-31 11:52:56.590 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:52:56.597 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:52:56.607 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:52:56.608 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:52:56.623 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.623 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.623 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.623 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.623 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.627 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.627 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.627 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.628 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.628 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.628 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.629 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.629 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/admin/dashboard
+2025-05-31 11:52:56.629 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.630 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.controller.AdminController - GET /api/admin/dashboard - Fetching admin dashboard
+2025-05-31 11:52:56.630 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.AdminService - Generating admin dashboard data
+2025-05-31 11:52:56.630 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.630 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.643 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/cart/3
+2025-05-31 11:52:56.644 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/orders/user/3
+2025-05-31 11:52:56.646 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/wishlist/3
+2025-05-31 11:52:56.647 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/addresses/user/3
+2025-05-31 11:52:56.657 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/3 - Fetching cart items
+2025-05-31 11:52:56.657 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/3 - Fetching user addresses
+2025-05-31 11:52:56.657 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/3 - Fetching user wishlist
+2025-05-31 11:52:56.657 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 3
+2025-05-31 11:52:56.657 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/3 - Fetching user orders
+2025-05-31 11:52:56.658 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 3
+2025-05-31 11:52:56.658 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 3
+2025-05-31 11:52:56.658 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 3
+2025-05-31 11:52:56.673 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 3
+2025-05-31 11:52:56.673 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 0 addresses for user ID: 3
+2025-05-31 11:52:56.673 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 3
+2025-05-31 11:52:56.674 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 3
+2025-05-31 11:52:56.674 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:52:56.674 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:52:56.675 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 3
+2025-05-31 11:52:56.675 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 3
+2025-05-31 11:52:56.676 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 3
+2025-05-31 11:52:56.675 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 3
+2025-05-31 11:52:56.707 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/admin/books/pending
+2025-05-31 11:52:56.707 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:52:56.707 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/admin/vendors/pending
+2025-05-31 11:52:56.707 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/admin/books/pending
+2025-05-31 11:52:56.708 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/admin/vendors/pending
+2025-05-31 11:52:56.709 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:52:56.709 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:52:56.709 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:52:56.709 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.709 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:52:56.710 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: admin@test.com
+2025-05-31 11:52:56.700 [http-nio-8080-exec-2] ERROR com.bookstore.bookstore_app.service.AdminService - Failed to generate admin dashboard - Error: null
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1195) ~[?:?]
+	at java.util.Map.of(Map.java:1384) ~[?:?]
+	at com.bookstore.bookstore_app.service.AdminService.getAdminDashboard(AdminService.java:265) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.AdminController.getAdminDashboard(AdminController.java:160) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at com.bookstore.bookstore_app.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:82) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-05-31 11:52:56.710 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:52:56.711 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:52:56.712 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.712 [http-nio-8080-exec-2] ERROR com.bookstore.bookstore_app.controller.AdminController - Error fetching admin dashboard via API - Error: null
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1195) ~[?:?]
+	at java.util.Map.of(Map.java:1384) ~[?:?]
+	at com.bookstore.bookstore_app.service.AdminService.getAdminDashboard(AdminService.java:265) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.AdminController.getAdminDashboard(AdminController.java:160) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at com.bookstore.bookstore_app.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:82) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-05-31 11:52:56.712 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.713 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:52:56.713 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: admin@test.com with role: ADMIN
+2025-05-31 11:52:56.714 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/admin/books/pending
+2025-05-31 11:52:56.714 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.AdminController - GET /api/admin/books/pending - Fetching pending books
+2025-05-31 11:52:56.715 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending books for approval
+2025-05-31 11:52:56.714 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/admin/vendors/pending
+2025-05-31 11:52:56.716 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.AdminController - GET /api/admin/vendors/pending - Fetching pending vendors
+2025-05-31 11:52:56.717 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending vendors for approval
+2025-05-31 11:52:56.718 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.AdminService - Found 0 pending books for approval
+2025-05-31 11:52:56.718 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.AdminService - Found 0 pending vendors for approval
+2025-05-31 11:52:56.718 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:52:56.718 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.AdminController - Retrieved 0 pending books via API
+2025-05-31 11:52:56.718 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.controller.AdminController - Retrieved 0 pending vendors via API
+2025-05-31 11:52:56.718 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:53:00.416 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:53:00.419 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:53:00.419 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:53:00.419 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:53:00.420 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:53:00.423 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:53:00.423 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:53:00.437 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:53:00.438 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:53:00.441 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/books/all
+2025-05-31 11:53:00.441 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/books/all
+2025-05-31 11:53:00.442 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/books/all
+2025-05-31 11:53:00.442 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:53:00.442 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/books/all
+2025-05-31 11:53:00.442 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
+2025-05-31 11:53:00.442 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:53:00.445 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:53:00.445 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.controller.BookController - API returned 0 books
+2025-05-31 11:53:13.232 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/auth/login
+2025-05-31 11:53:13.237 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing POST /api/auth/login
+2025-05-31 11:53:13.238 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: POST /api/auth/login
+2025-05-31 11:53:13.239 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Skipping JWT validation for public endpoint: /api/auth/login
+2025-05-31 11:53:13.239 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 11:53:13.239 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured POST /api/auth/login
+2025-05-31 11:53:13.313 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.controller.UserController - POST /api/auth/login - Login attempt for email: arnavsaharan2003@gmail.com
+2025-05-31 11:53:13.313 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: arnavsaharan2003@gmail.com
+2025-05-31 11:53:13.424 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - Generating token for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 11:53:13.433 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for arnavsaharan2003@gmail.com with role: USER
+2025-05-31 11:53:13.433 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.controller.UserController - User login successful via API - Email: arnavsaharan2003@gmail.com, Role: USER
+2025-05-31 11:53:13.445 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/addresses/user/1
+2025-05-31 11:53:13.446 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/orders/user/1
+2025-05-31 11:53:13.447 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/cart/1
+2025-05-31 11:53:13.448 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing OPTIONS /api/wishlist/1
+2025-05-31 11:53:13.449 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/addresses/user/1
+2025-05-31 11:53:13.451 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/wishlist/1
+2025-05-31 11:53:13.451 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/wishlist/1
+2025-05-31 11:53:13.451 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/addresses/user/1
+2025-05-31 11:53:13.451 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/orders/user/1
+2025-05-31 11:53:13.452 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/orders/user/1
+2025-05-31 11:53:13.452 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: arnavsaharan2003@gmail.com
+2025-05-31 11:53:13.453 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /api/cart/1
+2025-05-31 11:53:13.454 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: arnavsaharan2003@gmail.com
+2025-05-31 11:53:13.455 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: arnavsaharan2003@gmail.com
+2025-05-31 11:53:13.456 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /api/cart/1
+2025-05-31 11:53:13.456 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 11:53:13.457 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: arnavsaharan2003@gmail.com with role: USER
+2025-05-31 11:53:13.458 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Extracted email from token: arnavsaharan2003@gmail.com
+2025-05-31 11:53:13.458 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 11:53:13.459 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: arnavsaharan2003@gmail.com with role: USER
+2025-05-31 11:53:13.461 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 11:53:13.461 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: arnavsaharan2003@gmail.com with role: USER
+2025-05-31 11:53:13.462 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/wishlist/1
+2025-05-31 11:53:13.463 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/1 - Fetching user wishlist
+2025-05-31 11:53:13.463 [http-nio-8080-exec-8] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 1
+2025-05-31 11:53:13.464 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/orders/user/1
+2025-05-31 11:53:13.464 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.controller.OrderController - GET /api/orders/user/1 - Fetching user orders
+2025-05-31 11:53:13.464 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
+2025-05-31 11:53:13.465 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/addresses/user/1
+2025-05-31 11:53:13.466 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.AddressController - GET /api/addresses/user/1 - Fetching user addresses
+2025-05-31 11:53:13.466 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 1
+2025-05-31 11:53:13.467 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Token valid for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 11:53:13.467 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - Authentication successful for user: arnavsaharan2003@gmail.com with role: USER
+2025-05-31 11:53:13.468 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 1
+2025-05-31 11:53:13.468 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.controller.OrderController - Retrieved 0 orders via API for user ID: 1
+2025-05-31 11:53:13.469 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 1
+2025-05-31 11:53:13.469 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.controller.WishlistController - Retrieved 0 wishlist items via API for user ID: 1
+2025-05-31 11:53:13.477 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 1
+2025-05-31 11:53:13.478 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.controller.AddressController - Retrieved 0 addresses for user ID: 1
+2025-05-31 11:53:13.486 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /api/cart/1
+2025-05-31 11:53:13.489 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.CartController - GET /api/cart/1 - Fetching cart items
+2025-05-31 11:53:13.490 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
+2025-05-31 11:53:13.494 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
+2025-05-31 11:53:13.494 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.controller.CartController - Retrieved 0 cart items via API for user ID: 1
+2025-05-31 11:53:33.240 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 11:53:33.242 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-31 11:53:33.246 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
