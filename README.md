@@ -21,7 +21,7 @@ This is a comprehensive book store management system that allows users to browse
 ### Frontend
 - React 19.1.0
 - Axios for API calls
-- TailwindCSS for styling
+- CSS for styling
 - Lucide React for icons
 
 ## Prerequisites
@@ -77,7 +77,7 @@ This is a comprehensive book store management system that allows users to browse
 
 ## API Documentation
 
-The backend API documentation is available at `http://localhost:8080/v3/api-docs` when the server is running.
+The backend API documentation is available at `http://localhost:8080/swagger-ui/index.html` when the server is running.
 
 ## Contributing
 
