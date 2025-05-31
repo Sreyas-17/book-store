@@ -35,7 +35,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        // Public endpoints - no authentication required
+                        // ✅ Public endpoints - no authentication required
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/books/all").permitAll()
                         .requestMatchers("/api/books/search/**").permitAll()
@@ -44,33 +44,40 @@ public class SecurityConfig {
                         .requestMatchers("/api/books/new-arrivals").permitAll()
                         .requestMatchers("/error").permitAll()
 
-                        // Admin only endpoints
+                        // ✅ Allow Swagger UI access
+                        .requestMatchers(
+                                "/v3/api-docs/**",
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/swagger-resources/**",
+                                "/webjars/**"
+                        ).permitAll()
+
+                        // 🔒 Admin-only endpoints
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
 
-                        // Vendor only endpoints
+                        // 🔒 Vendor-only endpoints
                         .requestMatchers("/api/vendor/**").hasRole("VENDOR")
 
-                        // Book management - vendors can add, admins can manage all
+                        // 🔒 Book management - vendors can add, admins can manage all
                         .requestMatchers("/api/books/add").hasAnyRole("VENDOR", "ADMIN")
                         .requestMatchers("/api/books/*/image").hasAnyRole("VENDOR", "ADMIN")
 
-                        // User endpoints (all authenticated users)
+                        // 🔒 User endpoints (all authenticated users)
                         .requestMatchers("/api/cart/**").hasAnyRole("USER", "ADMIN", "VENDOR")
                         .requestMatchers("/api/orders/**").hasAnyRole("USER", "ADMIN", "VENDOR")
                         .requestMatchers("/api/wishlist/**").hasAnyRole("USER", "ADMIN", "VENDOR")
                         .requestMatchers("/api/addresses/**").hasAnyRole("USER", "ADMIN", "VENDOR")
 
-                        // Book rating - authenticated users only
+                        // 🔒 Book rating - authenticated users only
                         .requestMatchers("/api/books/*/rate").hasAnyRole("USER", "ADMIN", "VENDOR")
 
-                        // All other requests require authentication
+                        // 🔒 All other requests require authentication
                         .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                )
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .formLogin(form -> form.disable())
                 .httpBasic(basic -> basic.disable())
                 .exceptionHandling(exceptions -> exceptions
