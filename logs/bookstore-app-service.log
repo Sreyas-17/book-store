@@ -1,0 +1,354 @@
+2025-05-31 10:33:53.527 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 10:33:53.603 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 10:33:53.648 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 10:33:53.653 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 10:34:22.538 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: arnavsaharan2003@gmail.com
+2025-05-31 10:34:22.720 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 1 and email: arnavsaharan2003@gmail.com
+2025-05-31 10:34:41.889 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: arnavsaharan2003@gmail.com
+2025-05-31 10:34:42.004 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.UserService - Generating token for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 10:34:42.019 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for arnavsaharan2003@gmail.com with role: USER
+2025-05-31 10:34:42.076 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 1
+2025-05-31 10:34:42.076 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 1
+2025-05-31 10:34:42.076 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
+2025-05-31 10:34:42.078 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
+2025-05-31 10:34:42.087 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 1
+2025-05-31 10:34:42.090 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 1
+2025-05-31 10:34:42.094 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
+2025-05-31 10:34:42.094 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 1
+2025-05-31 11:04:04.473 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:04:04.526 [http-nio-8080-exec-8] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
+2025-05-31 11:04:04.526 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 1
+2025-05-31 11:04:04.529 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
+2025-05-31 11:04:04.529 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 1
+2025-05-31 11:04:04.563 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 1
+2025-05-31 11:04:04.563 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 1
+2025-05-31 11:04:04.563 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 1
+2025-05-31 11:04:04.563 [http-nio-8080-exec-8] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
+2025-05-31 11:04:04.564 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:04:04.576 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:04:04.580 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:04:34.610 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: arnavsaharan2003@gmail.com
+2025-05-31 11:04:34.715 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.UserService - Generating token for user: arnavsaharan2003@gmail.com with role: USER and ID: 1
+2025-05-31 11:04:34.720 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for arnavsaharan2003@gmail.com with role: USER
+2025-05-31 11:04:34.749 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 1
+2025-05-31 11:04:34.749 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 1
+2025-05-31 11:04:34.749 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 1
+2025-05-31 11:04:34.749 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 1
+2025-05-31 11:04:34.754 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 1
+2025-05-31 11:04:34.754 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 1
+2025-05-31 11:04:34.754 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 1
+2025-05-31 11:04:34.754 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 1
+2025-05-31 11:04:41.163 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kj
+2025-05-31 11:04:41.163 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: k
+2025-05-31 11:04:41.163 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kj
+2025-05-31 11:04:41.164 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: k
+2025-05-31 11:04:41.166 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kje
+2025-05-31 11:04:41.166 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kje
+2025-05-31 11:04:41.175 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kje
+2025-05-31 11:04:41.175 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kje
+2025-05-31 11:04:41.175 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: k
+2025-05-31 11:04:41.175 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: k
+2025-05-31 11:04:41.175 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kj
+2025-05-31 11:04:41.176 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kj
+2025-05-31 11:04:41.228 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjef
+2025-05-31 11:04:41.229 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjef
+2025-05-31 11:04:41.230 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjef
+2025-05-31 11:04:41.230 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjef
+2025-05-31 11:04:41.273 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefn
+2025-05-31 11:04:41.273 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefn
+2025-05-31 11:04:41.276 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefn
+2025-05-31 11:04:41.276 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefn
+2025-05-31 11:04:41.280 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefnj
+2025-05-31 11:04:41.280 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefnj
+2025-05-31 11:04:41.282 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefnj
+2025-05-31 11:04:41.283 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefnj
+2025-05-31 11:04:41.406 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefnjW
+2025-05-31 11:04:41.406 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefnjW
+2025-05-31 11:04:41.409 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefnjW
+2025-05-31 11:04:41.409 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefnjW
+2025-05-31 11:04:41.515 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefnjWF
+2025-05-31 11:04:41.515 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefnjWF
+2025-05-31 11:04:41.517 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefnjWF
+2025-05-31 11:04:41.517 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefnjWF
+2025-05-31 11:04:41.634 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefnjW
+2025-05-31 11:04:41.634 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefnjW
+2025-05-31 11:04:41.638 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefnjW
+2025-05-31 11:04:41.638 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefnjW
+2025-05-31 11:04:42.134 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefnj
+2025-05-31 11:04:42.134 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefnj
+2025-05-31 11:04:42.138 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefnj
+2025-05-31 11:04:42.138 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefnj
+2025-05-31 11:04:42.220 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjefn
+2025-05-31 11:04:42.220 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjefn
+2025-05-31 11:04:42.227 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjefn
+2025-05-31 11:04:42.227 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjefn
+2025-05-31 11:04:42.307 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kjef
+2025-05-31 11:04:42.307 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kjef
+2025-05-31 11:04:42.315 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kjef
+2025-05-31 11:04:42.318 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kjef
+2025-05-31 11:04:42.385 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kje
+2025-05-31 11:04:42.385 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kje
+2025-05-31 11:04:42.389 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kje
+2025-05-31 11:04:42.389 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kje
+2025-05-31 11:04:42.471 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: kj
+2025-05-31 11:04:42.471 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: kj
+2025-05-31 11:04:42.473 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: kj
+2025-05-31 11:04:42.474 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: kj
+2025-05-31 11:04:42.554 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by author: k
+2025-05-31 11:04:42.554 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Searching books by title: k
+2025-05-31 11:04:42.557 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books matching title: k
+2025-05-31 11:04:42.557 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.BookService - Found 0 books by author: k
+2025-05-31 11:04:42.639 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
+2025-05-31 11:04:42.644 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.BookService - Retrieved 0 books from database
+2025-05-31 11:08:06.731 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: arpit@gmail.com and role: VENDOR
+2025-05-31 11:08:06.871 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 2, email: arpit@gmail.com, and role: VENDOR
+2025-05-31 11:08:55.315 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: arpit@gmail.com
+2025-05-31 11:08:55.434 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.UserService - Generating token for user: arpit@gmail.com with role: VENDOR and ID: 2
+2025-05-31 11:08:55.439 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for arpit@gmail.com with role: VENDOR
+2025-05-31 11:08:55.455 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.VendorService - Registering vendor for user ID: 2
+2025-05-31 11:08:55.482 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.VendorService - Vendor registration completed - ID: 1, Business: arpit pvt ltd
+2025-05-31 11:10:13.819 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: arpit@gmail.com
+2025-05-31 11:10:13.938 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Generating token for user: arpit@gmail.com with role: VENDOR and ID: 2
+2025-05-31 11:10:13.943 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for arpit@gmail.com with role: VENDOR
+2025-05-31 11:10:13.990 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 2
+2025-05-31 11:10:13.991 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.VendorService - Fetching vendor profile for user ID: 2
+2025-05-31 11:10:13.991 [http-nio-8080-exec-4] DEBUG com.bookstore.bookstore_app.service.VendorService - Fetching books for vendor user ID: 2
+2025-05-31 11:10:13.996 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 2
+2025-05-31 11:10:13.998 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 2
+2025-05-31 11:10:14.002 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 2
+2025-05-31 11:10:14.002 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 2
+2025-05-31 11:10:14.003 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 2
+2025-05-31 11:10:14.005 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 2
+2025-05-31 11:10:14.005 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 2
+2025-05-31 11:10:14.012 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.VendorService - Generating dashboard data for vendor user ID: 2
+2025-05-31 11:10:14.029 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.VendorService - Retrieved 0 books for vendor: arpit pvt ltd
+2025-05-31 11:10:14.058 [http-nio-8080-exec-10] INFO  com.bookstore.bookstore_app.service.VendorService - Dashboard generated for vendor: arpit pvt ltd - 0 books, 0 orders
+2025-05-31 11:10:40.961 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: admin@test.com
+2025-05-31 11:10:40.981 [http-nio-8080-exec-4] WARN  com.bookstore.bookstore_app.service.UserService - Login failed - User not found: admin@test.com
+2025-05-31 11:13:15.179 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - Attempting to register user with email: admin@test.com and role: ADMIN
+2025-05-31 11:13:15.297 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.UserService - User registered successfully with ID: 3, email: admin@test.com, and role: ADMIN
+2025-05-31 11:13:36.454 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Login attempt with role info for email: admin@test.com
+2025-05-31 11:13:36.555 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Generating token for user: admin@test.com with role: ADMIN and ID: 3
+2025-05-31 11:13:36.557 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.UserService - Login successful for admin@test.com with role: ADMIN
+2025-05-31 11:13:36.602 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.WishlistService - Fetching wishlist for user ID: 3
+2025-05-31 11:13:36.603 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.OrderService - Fetching orders for user ID: 3
+2025-05-31 11:13:36.605 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 3
+2025-05-31 11:13:36.610 [http-nio-8080-exec-1] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending books for approval
+2025-05-31 11:13:36.610 [http-nio-8080-exec-9] DEBUG com.bookstore.bookstore_app.service.AdminService - Generating admin dashboard data
+2025-05-31 11:13:36.613 [http-nio-8080-exec-2] DEBUG com.bookstore.bookstore_app.service.AddressService - Fetching addresses for user ID: 3
+2025-05-31 11:13:36.613 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.service.OrderService - Found 0 orders for user ID: 3
+2025-05-31 11:13:36.613 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.CartService - Found 0 cart items for User ID: 3
+2025-05-31 11:13:36.617 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.service.WishlistService - Found 0 items in wishlist for user ID: 3
+2025-05-31 11:13:36.619 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.AddressService - Found 0 addresses for user ID: 3
+2025-05-31 11:13:36.625 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.service.AdminService - Found 0 pending books for approval
+2025-05-31 11:13:36.641 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending vendors for approval
+2025-05-31 11:13:36.647 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.AdminService - Found 1 pending vendors for approval
+2025-05-31 11:13:36.722 [http-nio-8080-exec-9] ERROR com.bookstore.bookstore_app.service.AdminService - Failed to generate admin dashboard - Error: null
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1195) ~[?:?]
+	at java.util.Map.of(Map.java:1384) ~[?:?]
+	at com.bookstore.bookstore_app.service.AdminService.getAdminDashboard(AdminService.java:265) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.AdminController.getAdminDashboard(AdminController.java:160) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at com.bookstore.bookstore_app.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:82) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-05-31 11:13:43.078 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.AdminService - Approving vendor with ID: 1
+2025-05-31 11:13:43.103 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.service.AdminService - Vendor approved successfully - ID: 1, Business: arpit pvt ltd
+2025-05-31 11:13:43.115 [http-nio-8080-exec-6] DEBUG com.bookstore.bookstore_app.service.AdminService - Fetching pending vendors for approval
+2025-05-31 11:13:43.117 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.service.AdminService - Found 0 pending vendors for approval
+2025-05-31 11:13:43.129 [http-nio-8080-exec-7] DEBUG com.bookstore.bookstore_app.service.AdminService - Generating admin dashboard data
+2025-05-31 11:13:43.144 [http-nio-8080-exec-7] ERROR com.bookstore.bookstore_app.service.AdminService - Failed to generate admin dashboard - Error: null
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1195) ~[?:?]
+	at java.util.Map.of(Map.java:1384) ~[?:?]
+	at com.bookstore.bookstore_app.service.AdminService.getAdminDashboard(AdminService.java:265) ~[classes/:?]
+	at com.bookstore.bookstore_app.controller.AdminController.getAdminDashboard(AdminController.java:160) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at com.bookstore.bookstore_app.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:82) ~[classes/:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
