@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-05-31 00:50:08.243 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
 2025-05-31 00:50:08.337 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Starting BookstoreAppApplication using Java 21.0.6 with PID 31628 (C:\Users\vibho\OneDrive\Desktop\bridgelabz final project\book-store\bookstore-app\target\classes started by vibho in C:\Users\vibho\OneDrive\Desktop\bridgelabz final project\book-store\bookstore-app)
 2025-05-31 00:50:08.337 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - No active profile set, falling back to 1 default profile: "default"
@@ -3617,3 +3618,5 @@ java.lang.RuntimeException: Address not found
 2025-05-31 14:44:14.808 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-31 14:44:14.808 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-05-31 14:44:14.825 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+=======
+>>>>>>> 38e8d8017c24f89ebc309d5b71c8a52bf3a99d2d

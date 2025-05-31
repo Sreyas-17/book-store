@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-05-31 10:21:54.809 [http-nio-8080-exec-3] DEBUG com.bookstore.bookstore_app.service.BookService - Fetching all books from database
 2025-05-31 10:21:54.991 [http-nio-8080-exec-5] DEBUG com.bookstore.bookstore_app.service.VendorService - Fetching vendor profile for user ID: 14
 2025-05-31 10:21:55.005 [http-nio-8080-exec-10] DEBUG com.bookstore.bookstore_app.service.CartService - Fetching cart items for User ID: 14
@@ -2569,3 +2570,5 @@ java.lang.RuntimeException: Address not found
 2025-05-31 14:44:14.687 [main] INFO  com.bookstore.bookstore_app.service.OrderService - Creating order for user ID: 1 with address ID: 1
 2025-05-31 14:44:14.690 [main] DEBUG com.bookstore.bookstore_app.service.OrderService - Order details - Number: ORD-C40C670A, Total: 39.98, Items: 1
 2025-05-31 14:44:14.695 [main] INFO  com.bookstore.bookstore_app.service.OrderService - Order created successfully - Order ID: 1, Number: ORD-12345678, Total: 39.98
+=======
+>>>>>>> 38e8d8017c24f89ebc309d5b71c8a52bf3a99d2d

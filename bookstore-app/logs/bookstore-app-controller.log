@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-05-31 10:21:54.785 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.controller.BookController - GET /api/books/all - Fetching all books
 2025-05-31 10:21:54.989 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.controller.VendorController - GET /api/vendor/profile - Fetching vendor profile
 2025-05-31 10:21:55.003 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.controller.WishlistController - GET /api/wishlist/14 - Fetching user wishlist
@@ -492,3 +493,5 @@ java.lang.NullPointerException: Cannot invoke "com.bookstore.bookstore_app.dto.L
 2025-05-31 14:44:13.723 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book removed from wishlist successfully via API - User ID: 1, Book ID: 1
 2025-05-31 14:44:13.731 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - POST /api/wishlist/move-to-cart - Moving to cart - User ID: 1, Book ID: 1
 2025-05-31 14:44:13.731 [main] INFO  com.bookstore.bookstore_app.controller.WishlistController - Book moved from wishlist to cart successfully via API - User ID: 1, Book ID: 1
+=======
+>>>>>>> 38e8d8017c24f89ebc309d5b71c8a52bf3a99d2d
