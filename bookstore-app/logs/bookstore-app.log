@@ -1270,3 +1270,89 @@ This generated password is for development use only. Your security configuration
 2025-05-31 11:33:39.930 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-31 11:33:39.935 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-05-31 11:33:39.961 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-31 12:30:22.649 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-31 12:30:22.683 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Starting BookstoreAppApplication using Java 23.0.2 with PID 37418 (/Users/mayankpal/Desktop/finalBridglabz/bookstore-app/target/classes started by mayankpal in /Users/mayankpal/Desktop/finalBridglabz/bookstore-app)
+2025-05-31 12:30:22.685 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-31 12:30:23.669 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 12:30:23.720 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 9 JPA repository interfaces.
+2025-05-31 12:30:24.235 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-31 12:30:24.243 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-31 12:30:24.245 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 12:30:24.245 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-05-31 12:30:24.306 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 12:30:24.307 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1588 ms
+2025-05-31 12:30:24.442 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 12:30:24.495 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-05-31 12:30:24.498 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-05-31 12:30:24.674 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 12:30:24.695 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 12:30:25.036 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e647f39
+2025-05-31 12:30:25.037 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 12:30:25.093 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31 12:30:25.094 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-31 12:30:25.866 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 12:30:26.018 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 12:30:26.339 [main] INFO  org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-31 12:30:27.081 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31 12:30:27.096 [main] WARN  org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8b5e4dec-bcb5-4359-8f7c-d2500276a26b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31 12:30:27.368 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@331d651b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54a0ada1, org.springframework.security.web.context.SecurityContextHolderFilter@4299b47d, org.springframework.security.web.header.HeaderWriterFilter@7f55e1b9, org.springframework.web.filter.CorsFilter@162bc9e8, org.springframework.security.web.authentication.logout.LogoutFilter@70903e7b, com.bookstore.bookstore_app.config.JwtAuthenticationFilter@d2708a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d6c4c43, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@538c823c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ec2462, org.springframework.security.web.session.SessionManagementFilter@7a6ef10b, org.springframework.security.web.access.ExceptionTranslationFilter@abce494, org.springframework.security.web.access.intercept.AuthorizationFilter@462f1d85]
+2025-05-31 12:30:27.653 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-31 12:30:27.673 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-31 12:30:27.683 [main] INFO  com.bookstore.bookstore_app.BookstoreAppApplication - Started BookstoreAppApplication in 5.246 seconds (process running for 6.647)
+2025-05-31 12:30:36.109 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31 12:30:36.110 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-31 12:30:36.118 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2025-05-31 12:30:36.125 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2025-05-31 12:30:36.132 [http-nio-8080-exec-1] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/index.html
+2025-05-31 12:30:36.132 [http-nio-8080-exec-1] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.134 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.161 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2025-05-31 12:30:36.341 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2025-05-31 12:30:36.342 [http-nio-8080-exec-2] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-ui.css
+2025-05-31 12:30:36.342 [http-nio-8080-exec-2] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.344 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.351 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2025-05-31 12:30:36.365 [http-nio-8080-exec-3] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/index.css
+2025-05-31 12:30:36.365 [http-nio-8080-exec-3] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.366 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.367 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-31 12:30:36.368 [http-nio-8080-exec-5] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-31 12:30:36.367 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2025-05-31 12:30:36.370 [http-nio-8080-exec-4] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-ui-bundle.js
+2025-05-31 12:30:36.371 [http-nio-8080-exec-4] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.372 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.372 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2025-05-31 12:30:36.372 [http-nio-8080-exec-5] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.373 [http-nio-8080-exec-6] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/swagger-initializer.js
+2025-05-31 12:30:36.374 [http-nio-8080-exec-6] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.375 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.375 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.411 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2025-05-31 12:30:36.413 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2025-05-31 12:30:36.414 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2025-05-31 12:30:36.430 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2025-05-31 12:30:36.446 [http-nio-8080-exec-5] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-31 12:30:36.886 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2025-05-31 12:30:36.888 [http-nio-8080-exec-7] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /v3/api-docs/swagger-config
+2025-05-31 12:30:36.889 [http-nio-8080-exec-7] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.890 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.893 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2025-05-31 12:30:36.895 [http-nio-8080-exec-8] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /swagger-ui/favicon-32x32.png
+2025-05-31 12:30:36.895 [http-nio-8080-exec-8] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.895 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.897 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2025-05-31 12:30:36.910 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2025-05-31 12:30:36.990 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Securing GET /v3/api-docs/bookstore-api
+2025-05-31 12:30:36.991 [http-nio-8080-exec-9] INFO  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - JWT Filter processing: GET /v3/api-docs/bookstore-api
+2025-05-31 12:30:36.991 [http-nio-8080-exec-9] WARN  com.bookstore.bookstore_app.config.JwtAuthenticationFilter - No Authorization header found or invalid format
+2025-05-31 12:30:36.991 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31 12:30:36.995 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy - Secured GET /v3/api-docs/bookstore-api
+2025-05-31 12:30:38.014 [http-nio-8080-exec-9] INFO  org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 995 ms
+2025-05-31 12:34:27.702 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 12:34:27.707 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-31 12:34:27.729 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
